@@ -1,17 +1,26 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { Viewer, Terrain, Ion } from 'cesium'
+import {
+  Viewer,
+  Ion,
+  createWorldTerrainAsync,
+  Color,
+  GeoJsonDataSource,
+  IonImageryProvider,
+  buildModuleUrl
+} from 'cesium'
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './cesium-overrides.css'
+import Cesium from 'cesium'
 
-// Configure Cesium base URL and Ion token
 if (typeof window !== 'undefined') {
-  // Set the base URL for Cesium assets
   window.CESIUM_BASE_URL = '/cesium/'
-  
-  // Optional: Set your Ion access token if you have one
-  // Ion.defaultAccessToken = 'your_ion_access_token_here'
+
+  // Set your Ion access token
+  const accessToken:string | any = process.env.NEXT_PUBLIC_CESIUM_ACCESS_TOKEN ;
+
+  Ion.defaultAccessToken = accessToken?.toString() // Replace with actual token
 }
 
 export default function GlobeViewer() {
@@ -23,18 +32,11 @@ export default function GlobeViewer() {
 
     const initializeViewer = async () => {
       try {
-        // Use a simpler terrain approach to avoid loading issues
-        let terrain
-        try {
-          terrain = await Terrain.fromWorldTerrain()
-        } catch (terrainError) {
-          console.warn('Failed to load world terrain, using default:', terrainError)
-          terrain = undefined // Will use default ellipsoid
-        }
+        const terrainProvider = await createWorldTerrainAsync()
 
         viewerRef.current = new Viewer(cesiumContainer.current!, {
-          terrain,
-          timeline: false,
+          terrainProvider,
+          timeline: true,
           animation: false,
           baseLayerPicker: false,
           fullscreenButton: false,
@@ -42,15 +44,26 @@ export default function GlobeViewer() {
           homeButton: false,
           infoBox: false,
           sceneModePicker: false,
-          selectionIndicator: false,
+          selectionIndicator: true,
           navigationHelpButton: false,
           navigationInstructionsInitiallyVisible: false,
           scene3DOnly: true,
           shouldAnimate: true,
         })
 
-        // Optional: Remove default imagery layer if you want a blank globe
-        // viewerRef.current.imageryLayers.remove(viewerRef.current.imageryLayers.get(0), true)
+        const geoJson = await GeoJsonDataSource.load(
+          'https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json',
+          {
+            stroke: Color.BLACK,
+            fill: Color.TRANSPARENT,
+            strokeWidth: 2
+          }
+        )
+        viewerRef.current.dataSources.add(geoJson)
+
+        // Optional: fly to an initial location
+        const viewer = viewerRef.current
+        viewer.camera.flyHome(0)
 
       } catch (error) {
         console.error('Failed to initialize Cesium viewer:', error)
