@@ -136,3 +136,4 @@ dist
 .pnp.*
 
 backend/climate_foresight_venv
+backend/data/

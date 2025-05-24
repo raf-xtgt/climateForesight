@@ -7,20 +7,29 @@ import {
   createWorldTerrainAsync,
   Color,
   GeoJsonDataSource,
-  IonImageryProvider,
-  buildModuleUrl
+  Cartesian3,
+  Entity,
+  Cartesian2,
+  NearFarScalar,
+  VerticalOrigin,
+  HorizontalOrigin,
+  LabelStyle,
+  DistanceDisplayCondition
 } from 'cesium'
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './cesium-overrides.css'
-import Cesium from 'cesium'
+import countryData from '../../../public/data/country_coordinates.json'
 
 if (typeof window !== 'undefined') {
   window.CESIUM_BASE_URL = '/cesium/'
+  const accessToken: string | any = process.env.NEXT_PUBLIC_CESIUM_ACCESS_TOKEN
+  Ion.defaultAccessToken = accessToken?.toString()
+}
 
-  // Set your Ion access token
-  const accessToken:string | any = process.env.NEXT_PUBLIC_CESIUM_ACCESS_TOKEN ;
-
-  Ion.defaultAccessToken = accessToken?.toString() // Replace with actual token
+interface CountryData {
+  country: string
+  latitude: number
+  longitude: number
 }
 
 export default function GlobeViewer() {
@@ -36,34 +45,71 @@ export default function GlobeViewer() {
 
         viewerRef.current = new Viewer(cesiumContainer.current!, {
           terrainProvider,
-          timeline: true,
+          timeline: false,
           animation: false,
           baseLayerPicker: false,
-          fullscreenButton: false,
+          fullscreenButton: true,
           vrButton: false,
-          homeButton: false,
+          homeButton: true,
           infoBox: false,
           sceneModePicker: false,
-          selectionIndicator: true,
+          selectionIndicator: false,
           navigationHelpButton: false,
           navigationInstructionsInitiallyVisible: false,
           scene3DOnly: true,
-          shouldAnimate: true,
         })
 
+        // Load country borders with reduced opacity
         const geoJson = await GeoJsonDataSource.load(
           'https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json',
           {
-            stroke: Color.BLACK,
+            stroke: Color.BLACK.withAlpha(0.3),
             fill: Color.TRANSPARENT,
-            strokeWidth: 2
+            strokeWidth: 0.5
           }
         )
         viewerRef.current.dataSources.add(geoJson)
 
-        // Optional: fly to an initial location
+        // Add country labels with distance-based visibility
         const viewer = viewerRef.current
-        viewer.camera.flyHome(0)
+        const entities = viewer.entities
+
+        countryData.forEach((country: CountryData) => {
+          const position = Cartesian3.fromDegrees(
+            country.longitude,
+            country.latitude
+          )
+          
+          entities.add({
+            position,
+            label: {
+              text: country.country,
+              font: '45pt sans-serif',
+              style: LabelStyle.FILL,
+              fillColor: Color.WHITE,
+              outlineColor: Color.BLACK,
+              outlineWidth: 1,
+              verticalOrigin: VerticalOrigin.CENTER,
+              horizontalOrigin: HorizontalOrigin.CENTER,
+              pixelOffset: new Cartesian3(0, 0),
+              showBackground: true,
+              backgroundColor: Color.BLACK.withAlpha(0.5),
+              backgroundPadding: new Cartesian2(7, 5),
+              disableDepthTestDistance: Number.POSITIVE_INFINITY,
+              // Only show label when camera is within 5M to 500k meters
+              distanceDisplayCondition: new DistanceDisplayCondition(500000, 5000000),
+              // Scale down when zooming out
+              scale: 0.7,
+              scaleByDistance: new NearFarScalar(500000, 1.0, 5000000, 0.5)            }
+          })
+        })
+
+
+        // Add event listener to handle zoom changes
+        viewer.scene.postRender.addEventListener(() => {
+          const zoom = viewer.camera.positionCartographic.height
+          entities.show = zoom < 8000000 // Hide all labels when zoomed out too far
+        })
 
       } catch (error) {
         console.error('Failed to initialize Cesium viewer:', error)
