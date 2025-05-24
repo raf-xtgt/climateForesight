@@ -1,20 +1,41 @@
+import { Box, Flex } from '@chakra-ui/react'
 import GlobeViewer from './globe/GlobeViewer'
 import ClimateControls from './globe/ClimateControls'
+import FloatingHeader from './FloatingHeader'
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen">
-      <header className="bg-blue-600 text-white p-4">
-        <h1 className="text-2xl font-bold">Climate Globe Visualizer</h1>
-      </header>
-      <main className="flex-1 flex flex-col md:flex-row">
-        <div className="flex-1">
+    <Box 
+      minH="100vh"
+      position="relative"
+    >
+      <FloatingHeader />
+      
+      <Flex 
+        direction={{ base: 'column', md: 'row' }}
+        minH="100vh"
+        pt={20} // Add padding top to account for floating header
+      >
+        <Box 
+          flex="1" 
+          h={{ base: '80vh', md: '80vh' }}
+          position="relative"
+        >
           <GlobeViewer />
-        </div>
-        <div className="w-full md:w-64 bg-gray-100 p-4">
+        </Box>
+        
+        <Box 
+          w={{ base: '100%', md: '320px' }}
+          bg="rgba(255, 255, 255, 0.1)"
+          backdropFilter="blur(10px)"
+          borderLeft={{ md: '1px solid rgba(255, 255, 255, 0.2)' }}
+          p={6}
+          h={{ base: '20vh', md: '80vh' }}
+          overflowY="auto"
+        >
           <ClimateControls />
-        </div>
-      </main>
-    </div>
+        </Box>
+      </Flex>
+    </Box>
   )
 }
