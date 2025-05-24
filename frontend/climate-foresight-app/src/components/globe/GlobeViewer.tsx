@@ -63,7 +63,7 @@ export default function GlobeViewer() {
         const geoJson = await GeoJsonDataSource.load(
           'https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json',
           {
-            stroke: Color.BLACK.withAlpha(0.3),
+            stroke: Color.YELLOW.withAlpha(0.3),
             fill: Color.TRANSPARENT,
             strokeWidth: 0.5
           }
