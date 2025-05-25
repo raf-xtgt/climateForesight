@@ -3,7 +3,10 @@ import {
   ImageryProvider,
   SingleTileImageryProvider,
   Rectangle,
+  GeoJsonDataSource,
   Color,
+  JulianDate,
+  Cartographic,
   Cartesian2,
   Cartesian3,
   ScreenSpaceEventHandler,
@@ -60,57 +63,96 @@ const getTemperatureColor = (temp: number, minTemp: number, maxTemp: number): Co
   }
 };
 
+type Point = [number, number];
+
 // Create a heatmap texture using Delaunay triangulation
 const createHeatmapTexture = async (climateData: ClimateData[], width: number, height: number) => {
   const canvas = document.createElement('canvas');
-  canvas.width = 4096;
-  canvas.height = 2048;
+  canvas.width = width;
+  canvas.height = height;
   const ctx = canvas.getContext('2d')!;
+
+  // Create a landmask (white=land, black=water)
+  const landmask = await createLandmask(width, height);
   
-  // Prepare data with proper typing
-  const points: [number, number][] = climateData.map(d => [
+  // Create typed points array
+  const points: Point[] = climateData.map(d => [
     ((d.coordinates.longitude + 180) / 360) * width,
     ((90 - d.coordinates.latitude) / 180) * height
-  ]);
-  
+  ] as Point); // Explicitly type as Point
+
   const values = climateData.map(d => d.temperature);
   const minTemp = Math.min(...values);
   const maxTemp = Math.max(...values);
-  
-  // Create Delaunay triangulation with proper typing
   const delaunay = Delaunay.from(points);
-  const voronoi = delaunay.voronoi([0, 0, width, height]);
   
-  // Create image data for direct pixel manipulation
   const imageData = ctx.createImageData(width, height);
   const data = imageData.data;
   
-  // For each pixel in the canvas
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
-      // Find the nearest data point
-      const i = delaunay.find(x, y);
-      const temp = values[i];
-      
-      // Get color for this temperature
-      const color = getTemperatureColor(temp, minTemp, maxTemp);
-      
-      // Set pixel color
       const idx = (y * width + x) * 4;
-      data[idx] = color.red * 255;     // R
-      data[idx + 1] = color.green * 255; // G
-      data[idx + 2] = color.blue * 255;  // B
-      data[idx + 3] = color.alpha * 255; // A
+      
+      // Only render if this is land (white in landmask)
+      if (landmask.data[idx] > 128) {
+        const i = delaunay.find(x, y);
+        const temp = values[i];
+        const color = getTemperatureColor(temp, minTemp, maxTemp);
+        
+        data[idx] = color.red * 255;
+        data[idx + 1] = color.green * 255;
+        data[idx + 2] = color.blue * 255;
+        data[idx + 3] = color.alpha * 255;
+      } else {
+        // Transparent for water areas
+        data[idx + 3] = 0;
+      }
     }
   }
   
-  // Apply blur for smoother transitions
   ctx.putImageData(imageData, 0, 0);
-  ctx.filter = 'blur(8px)';
-  ctx.drawImage(canvas, 0, 0);
-  ctx.filter = 'none';
-  
   return { canvas, minTemp, maxTemp };
+};
+
+
+const createLandmask = async (width: number, height: number): Promise<ImageData> => {
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d')!;
+  
+  // Use Cesium's built-in land polygon data
+  const geoJson = await GeoJsonDataSource.load(
+    'https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json'
+  );
+  
+  // Draw white land areas on black background
+  ctx.fillStyle = 'black';
+  ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = 'white';
+  
+  geoJson.entities.values.forEach((entity:any) => {
+    if (entity.polygon) {
+      const positions = entity.polygon.hierarchy.getValue(JulianDate.now()).positions;
+      const coords = positions.map((pos:any) => {
+        const carto = Cartographic.fromCartesian(pos);
+        return [
+          ((carto.longitude + Math.PI) / (2 * Math.PI)) * width,
+          ((Math.PI/2 - carto.latitude) / Math.PI) * height
+        ] as [number, number];
+      });
+      
+      ctx.beginPath();
+      coords.forEach(([x, y]: [number, number], i: number) => {
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.closePath();
+      ctx.fill();
+    }
+  });
+  
+  return ctx.getImageData(0, 0, width, height);
 };
 
 export const createTemperatureImageryLayer = async (viewer: Viewer, climateData: ClimateData[]) : Promise<TemperatureLayerResult> => {
