@@ -19,6 +19,9 @@ import {
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './cesium-overrides.css'
 import countryData from '../../../public/data/country_coordinates.json'
+import { getClimateData } from '@/services/climateService'
+import { ClimateData } from '@/models/climateData'
+import { createTemperatureImageryLayer } from './imageryLayers/temperatureImageryLayer'
 
 if (typeof window !== 'undefined') {
   window.CESIUM_BASE_URL = '/cesium/'
@@ -31,6 +34,26 @@ interface CountryData {
   latitude: number
   longitude: number
 }
+
+// Add this function inside your GlobeViewer component
+const fetchAndRenderClimateData = async (viewer: Viewer) => {
+  try {
+    // Fetch climate data for all countries
+    const response = await getClimateData()
+    
+    const climateData: ClimateData[] = response.data
+    console.log("climateData", climateData)
+    // Create temperature visualization
+    createTemperatureImageryLayer(viewer, climateData)
+    
+    // You can add similar heatmaps for other parameters
+    // by creating additional entities with different color schemes
+    
+  } catch (error) {
+    console.error('Error fetching climate data:', error)
+  }
+}
+
 
 export default function GlobeViewer() {
   const cesiumContainer = useRef<HTMLDivElement>(null)
@@ -103,6 +126,8 @@ export default function GlobeViewer() {
               scaleByDistance: new NearFarScalar(500000, 1.0, 5000000, 0.5)            }
           })
         })
+
+        fetchAndRenderClimateData(viewerRef.current)
 
 
         // Add event listener to handle zoom changes
