@@ -1,0 +1,4397 @@
+{
+    "data": [
+      {
+        "coordinates": {
+          "latitude": 33,
+          "longitude": 65
+        },
+        "humidity": 34.29,
+        "precipitation": 0.55,
+        "sunlight": 20.63,
+        "temperature": 13.95,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.32
+      },
+      {
+        "coordinates": {
+          "latitude": 41,
+          "longitude": 20
+        },
+        "humidity": 67.92,
+        "precipitation": 2.23,
+        "sunlight": 14.79,
+        "temperature": 14.86,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.83
+      },
+      {
+        "coordinates": {
+          "latitude": 28,
+          "longitude": 3
+        },
+        "humidity": 25.79,
+        "precipitation": 0.08,
+        "sunlight": 21.63,
+        "temperature": 24.01,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.81
+      },
+      {
+        "coordinates": {
+          "latitude": -14.3333,
+          "longitude": -170
+        },
+        "humidity": 80.45,
+        "precipitation": 5.52,
+        "sunlight": 19.38,
+        "temperature": 27.75,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.86
+      },
+      {
+        "coordinates": {
+          "latitude": 42.5,
+          "longitude": 1.6
+        },
+        "humidity": 77.95,
+        "precipitation": 1.98,
+        "sunlight": 14.98,
+        "temperature": 5.74,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.51
+      },
+      {
+        "coordinates": {
+          "latitude": -12.5,
+          "longitude": 18.5
+        },
+        "humidity": 58.69,
+        "precipitation": 3.03,
+        "sunlight": 19.96,
+        "temperature": 21.14,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.99
+      },
+      {
+        "coordinates": {
+          "latitude": 18.25,
+          "longitude": -63.1667
+        },
+        "humidity": 77.65,
+        "precipitation": 1.73,
+        "sunlight": 20.76,
+        "temperature": 27.13,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.59
+      },
+      {
+        "coordinates": {
+          "latitude": -90,
+          "longitude": 0
+        },
+        "humidity": 88.32,
+        "precipitation": 0.17,
+        "sunlight": 10.81,
+        "temperature": -49.19,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.31
+      },
+      {
+        "coordinates": {
+          "latitude": 17.05,
+          "longitude": -61.8
+        },
+        "humidity": 77.64,
+        "precipitation": 3.09,
+        "sunlight": 20.9,
+        "temperature": 27.21,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.73
+      },
+      {
+        "coordinates": {
+          "latitude": -34,
+          "longitude": -64
+        },
+        "humidity": 68.19,
+        "precipitation": 2.43,
+        "sunlight": 17.89,
+        "temperature": 16.66,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.35
+      },
+      {
+        "coordinates": {
+          "latitude": 40,
+          "longitude": 45
+        },
+        "humidity": 60.91,
+        "precipitation": 1.02,
+        "sunlight": 14.54,
+        "temperature": 7.86,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.62
+      },
+      {
+        "coordinates": {
+          "latitude": 12.5,
+          "longitude": -69.9667
+        },
+        "humidity": 80.66,
+        "precipitation": 1.17,
+        "sunlight": 20.98,
+        "temperature": 27.6,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 6.99
+      },
+      {
+        "coordinates": {
+          "latitude": -27,
+          "longitude": 133
+        },
+        "humidity": 37.58,
+        "precipitation": 0.43,
+        "sunlight": 22.2,
+        "temperature": 21.37,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.22
+      },
+      {
+        "coordinates": {
+          "latitude": 47.3333,
+          "longitude": 13.3333
+        },
+        "humidity": 83.46,
+        "precipitation": 3.94,
+        "sunlight": 11.7,
+        "temperature": 5.7,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.34
+      },
+      {
+        "coordinates": {
+          "latitude": 40.5,
+          "longitude": 47.5
+        },
+        "humidity": 58.6,
+        "precipitation": 0.81,
+        "sunlight": 14.67,
+        "temperature": 16.97,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.93
+      },
+      {
+        "coordinates": {
+          "latitude": 24.25,
+          "longitude": -76
+        },
+        "humidity": 76.59,
+        "precipitation": 1.93,
+        "sunlight": 19.48,
+        "temperature": 26.27,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.08
+      },
+      {
+        "coordinates": {
+          "latitude": 26,
+          "longitude": 50.55
+        },
+        "humidity": 62.04,
+        "precipitation": 0.12,
+        "sunlight": 18.69,
+        "temperature": 27.26,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.87
+      },
+      {
+        "coordinates": {
+          "latitude": 24,
+          "longitude": 90
+        },
+        "humidity": 73.97,
+        "precipitation": 5.81,
+        "sunlight": 15.42,
+        "temperature": 25.63,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.97
+      },
+      {
+        "coordinates": {
+          "latitude": 13.1667,
+          "longitude": -59.5333
+        },
+        "humidity": 78.05,
+        "precipitation": 2.08,
+        "sunlight": 20.86,
+        "temperature": 27.46,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.99
+      },
+      {
+        "coordinates": {
+          "latitude": 53,
+          "longitude": 28
+        },
+        "humidity": 83.05,
+        "precipitation": 1.95,
+        "sunlight": 10.83,
+        "temperature": 7.06,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.98
+      },
+      {
+        "coordinates": {
+          "latitude": 50.8333,
+          "longitude": 4
+        },
+        "humidity": 83.68,
+        "precipitation": 2.06,
+        "sunlight": 11.03,
+        "temperature": 10.42,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.15
+      },
+      {
+        "coordinates": {
+          "latitude": 17.25,
+          "longitude": -88.75
+        },
+        "humidity": 82.18,
+        "precipitation": 4.75,
+        "sunlight": 18.09,
+        "temperature": 25.85,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.13
+      },
+      {
+        "coordinates": {
+          "latitude": 9.5,
+          "longitude": 2.25
+        },
+        "humidity": 68.31,
+        "precipitation": 3.04,
+        "sunlight": 18.59,
+        "temperature": 26.35,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.88
+      },
+      {
+        "coordinates": {
+          "latitude": 32.3333,
+          "longitude": -64.75
+        },
+        "humidity": 77.56,
+        "precipitation": 3.27,
+        "sunlight": 16.96,
+        "temperature": 22.59,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.63
+      },
+      {
+        "coordinates": {
+          "latitude": 27.5,
+          "longitude": 90.5
+        },
+        "humidity": 80.78,
+        "precipitation": 3.29,
+        "sunlight": 14.62,
+        "temperature": 7.74,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.39
+      },
+      {
+        "coordinates": {
+          "latitude": -17,
+          "longitude": -65
+        },
+        "humidity": 68.53,
+        "precipitation": 2.27,
+        "sunlight": 16.89,
+        "temperature": 25.19,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.62
+      },
+      {
+        "coordinates": {
+          "latitude": 44,
+          "longitude": 18
+        },
+        "humidity": 78.18,
+        "precipitation": 2.44,
+        "sunlight": 13.04,
+        "temperature": 9.01,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.66
+      },
+      {
+        "coordinates": {
+          "latitude": -22,
+          "longitude": 24
+        },
+        "humidity": 38.6,
+        "precipitation": 1.07,
+        "sunlight": 22.01,
+        "temperature": 23.49,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.66
+      },
+      {
+        "coordinates": {
+          "latitude": -54.4333,
+          "longitude": 3.4
+        },
+        "humidity": 88.6,
+        "precipitation": 2.87,
+        "sunlight": 8.41,
+        "temperature": -0.77,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 8.7
+      },
+      {
+        "coordinates": {
+          "latitude": -10,
+          "longitude": -55
+        },
+        "humidity": 76.84,
+        "precipitation": 5.13,
+        "sunlight": 18.79,
+        "temperature": 26.06,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.13
+      },
+      {
+        "coordinates": {
+          "latitude": -6,
+          "longitude": 71.5
+        },
+        "humidity": 81.11,
+        "precipitation": 5.57,
+        "sunlight": 19.78,
+        "temperature": 27.58,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.59
+      },
+      {
+        "coordinates": {
+          "latitude": 4.5,
+          "longitude": 114.6667
+        },
+        "humidity": 88.41,
+        "precipitation": 8.14,
+        "sunlight": 18.21,
+        "temperature": 26.45,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.75
+      },
+      {
+        "coordinates": {
+          "latitude": 43,
+          "longitude": 25
+        },
+        "humidity": 73.07,
+        "precipitation": 1.88,
+        "sunlight": 14.12,
+        "temperature": 11.22,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.46
+      },
+      {
+        "coordinates": {
+          "latitude": 13,
+          "longitude": -2
+        },
+        "humidity": 49.46,
+        "precipitation": 2.56,
+        "sunlight": 21.5,
+        "temperature": 27.35,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.47
+      },
+      {
+        "coordinates": {
+          "latitude": -3.5,
+          "longitude": 30
+        },
+        "humidity": 77.49,
+        "precipitation": 3.92,
+        "sunlight": 18.92,
+        "temperature": 18.93,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.61
+      },
+      {
+        "coordinates": {
+          "latitude": 13,
+          "longitude": 105
+        },
+        "humidity": 69.75,
+        "precipitation": 2.9,
+        "sunlight": 18.54,
+        "temperature": 28.39,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.65
+      },
+      {
+        "coordinates": {
+          "latitude": 6,
+          "longitude": 12
+        },
+        "humidity": 76.39,
+        "precipitation": 4.59,
+        "sunlight": 19.51,
+        "temperature": 22.69,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.36
+      },
+      {
+        "coordinates": {
+          "latitude": 60,
+          "longitude": -95
+        },
+        "humidity": 92.61,
+        "precipitation": 1.47,
+        "sunlight": 10.4,
+        "temperature": -7.73,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.47
+      },
+      {
+        "coordinates": {
+          "latitude": 16,
+          "longitude": -24
+        },
+        "humidity": 81.37,
+        "precipitation": 0.69,
+        "sunlight": 20.53,
+        "temperature": 23.81,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.57
+      },
+      {
+        "coordinates": {
+          "latitude": 19.5,
+          "longitude": -80.5
+        },
+        "humidity": 79.23,
+        "precipitation": 2.18,
+        "sunlight": 20.2,
+        "temperature": 27.57,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.14
+      },
+      {
+        "coordinates": {
+          "latitude": 7,
+          "longitude": 21
+        },
+        "humidity": 72.0,
+        "precipitation": 4.57,
+        "sunlight": 19.8,
+        "temperature": 24.93,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.62
+      },
+      {
+        "coordinates": {
+          "latitude": 15,
+          "longitude": 19
+        },
+        "humidity": 27.91,
+        "precipitation": 0.68,
+        "sunlight": 23.7,
+        "temperature": 28.21,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.28
+      },
+      {
+        "coordinates": {
+          "latitude": -30,
+          "longitude": -71
+        },
+        "humidity": 58.16,
+        "precipitation": 0.23,
+        "sunlight": 23.48,
+        "temperature": 16.8,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.42
+      },
+      {
+        "coordinates": {
+          "latitude": 35,
+          "longitude": 105
+        },
+        "humidity": 67.54,
+        "precipitation": 1.55,
+        "sunlight": 15.02,
+        "temperature": 7.92,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.51
+      },
+      {
+        "coordinates": {
+          "latitude": -10.5,
+          "longitude": 105.6667
+        },
+        "humidity": 79.37,
+        "precipitation": 3.61,
+        "sunlight": 20.23,
+        "temperature": 27.28,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.34
+      },
+      {
+        "coordinates": {
+          "latitude": -12.5,
+          "longitude": 96.8333
+        },
+        "humidity": 79.59,
+        "precipitation": 3.43,
+        "sunlight": 20.24,
+        "temperature": 26.94,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.97
+      },
+      {
+        "coordinates": {
+          "latitude": 4,
+          "longitude": -72
+        },
+        "humidity": 86.17,
+        "precipitation": 8.94,
+        "sunlight": 17.42,
+        "temperature": 25.69,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.49
+      },
+      {
+        "coordinates": {
+          "latitude": -12.1667,
+          "longitude": 44.25
+        },
+        "humidity": 76.64,
+        "precipitation": 2.86,
+        "sunlight": 20.89,
+        "temperature": 26.95,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.77
+      },
+      {
+        "coordinates": {
+          "latitude": -1,
+          "longitude": 15
+        },
+        "humidity": 78.14,
+        "precipitation": 4.18,
+        "sunlight": 16.88,
+        "temperature": 25.7,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.0
+      },
+      {
+        "coordinates": {
+          "latitude": 0,
+          "longitude": 25
+        },
+        "humidity": 86.84,
+        "precipitation": 4.53,
+        "sunlight": 16.95,
+        "temperature": 24.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.11
+      },
+      {
+        "coordinates": {
+          "latitude": -21.2333,
+          "longitude": -159.7667
+        },
+        "humidity": 79.71,
+        "precipitation": 4.23,
+        "sunlight": 18.54,
+        "temperature": 25.05,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.35
+      },
+      {
+        "coordinates": {
+          "latitude": 10,
+          "longitude": -84
+        },
+        "humidity": 89.41,
+        "precipitation": 6.89,
+        "sunlight": 15.5,
+        "temperature": 20.33,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.14
+      },
+      {
+        "coordinates": {
+          "latitude": 8,
+          "longitude": -5
+        },
+        "humidity": 73.96,
+        "precipitation": 4.0,
+        "sunlight": 17.7,
+        "temperature": 26.05,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.7
+      },
+      {
+        "coordinates": {
+          "latitude": 45.1667,
+          "longitude": 15.5
+        },
+        "humidity": 81.01,
+        "precipitation": 3.48,
+        "sunlight": 13.02,
+        "temperature": 10.4,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.29
+      },
+      {
+        "coordinates": {
+          "latitude": 21.5,
+          "longitude": -80
+        },
+        "humidity": 75.98,
+        "precipitation": 2.88,
+        "sunlight": 20.38,
+        "temperature": 27.05,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.03
+      },
+      {
+        "coordinates": {
+          "latitude": 35,
+          "longitude": 33
+        },
+        "humidity": 62.38,
+        "precipitation": 0.96,
+        "sunlight": 17.95,
+        "temperature": 20.15,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.24
+      },
+      {
+        "coordinates": {
+          "latitude": 49.75,
+          "longitude": 15.5
+        },
+        "humidity": 79.26,
+        "precipitation": 1.88,
+        "sunlight": 11.25,
+        "temperature": 8.98,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.73
+      },
+      {
+        "coordinates": {
+          "latitude": 56,
+          "longitude": 10
+        },
+        "humidity": 87.35,
+        "precipitation": 2.16,
+        "sunlight": 10.12,
+        "temperature": 8.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.01
+      },
+      {
+        "coordinates": {
+          "latitude": 11.5,
+          "longitude": 43
+        },
+        "humidity": 62.41,
+        "precipitation": 0.59,
+        "sunlight": 20.79,
+        "temperature": 29.36,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.87
+      },
+      {
+        "coordinates": {
+          "latitude": 15.4167,
+          "longitude": -61.3333
+        },
+        "humidity": 78.68,
+        "precipitation": 3.86,
+        "sunlight": 20.44,
+        "temperature": 26.92,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.96
+      },
+      {
+        "coordinates": {
+          "latitude": 19,
+          "longitude": -70.6667
+        },
+        "humidity": 78.38,
+        "precipitation": 1.72,
+        "sunlight": 19.03,
+        "temperature": 21.64,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.86
+      },
+      {
+        "coordinates": {
+          "latitude": -2,
+          "longitude": -77.5
+        },
+        "humidity": 90.32,
+        "precipitation": 7.89,
+        "sunlight": 14.96,
+        "temperature": 22.75,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.09
+      },
+      {
+        "coordinates": {
+          "latitude": 27,
+          "longitude": 30
+        },
+        "humidity": 38.63,
+        "precipitation": 0.02,
+        "sunlight": 22.48,
+        "temperature": 21.75,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.0
+      },
+      {
+        "coordinates": {
+          "latitude": 13.8333,
+          "longitude": -88.9167
+        },
+        "humidity": 72.54,
+        "precipitation": 3.36,
+        "sunlight": 20.86,
+        "temperature": 24.25,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.48
+      },
+      {
+        "coordinates": {
+          "latitude": 2,
+          "longitude": 10
+        },
+        "humidity": 89.32,
+        "precipitation": 6.31,
+        "sunlight": 15.16,
+        "temperature": 25.0,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.13
+      },
+      {
+        "coordinates": {
+          "latitude": 15,
+          "longitude": 39
+        },
+        "humidity": 55.5,
+        "precipitation": 1.5,
+        "sunlight": 20.14,
+        "temperature": 21.3,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.53
+      },
+      {
+        "coordinates": {
+          "latitude": 59,
+          "longitude": 26
+        },
+        "humidity": 86.8,
+        "precipitation": 1.97,
+        "sunlight": 9.62,
+        "temperature": 5.41,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.43
+      },
+      {
+        "coordinates": {
+          "latitude": 8,
+          "longitude": 38
+        },
+        "humidity": 73.78,
+        "precipitation": 4.1,
+        "sunlight": 21.35,
+        "temperature": 14.7,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.14
+      },
+      {
+        "coordinates": {
+          "latitude": -51.75,
+          "longitude": -59
+        },
+        "humidity": 84.24,
+        "precipitation": 1.45,
+        "sunlight": 11.31,
+        "temperature": 6.34,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.91
+      },
+      {
+        "coordinates": {
+          "latitude": 62,
+          "longitude": -7
+        },
+        "humidity": 84.82,
+        "precipitation": 3.24,
+        "sunlight": 7.37,
+        "temperature": 7.49,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 6.86
+      },
+      {
+        "coordinates": {
+          "latitude": -18,
+          "longitude": 175
+        },
+        "humidity": 80.26,
+        "precipitation": 4.44,
+        "sunlight": 19.04,
+        "temperature": 26.26,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.3
+      },
+      {
+        "coordinates": {
+          "latitude": 64,
+          "longitude": 26
+        },
+        "humidity": 91.54,
+        "precipitation": 2.4,
+        "sunlight": 8.33,
+        "temperature": 2.48,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.44
+      },
+      {
+        "coordinates": {
+          "latitude": 46,
+          "longitude": 2
+        },
+        "humidity": 81.53,
+        "precipitation": 2.41,
+        "sunlight": 12.83,
+        "temperature": 10.31,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.8
+      },
+      {
+        "coordinates": {
+          "latitude": 4,
+          "longitude": -53
+        },
+        "humidity": 86.0,
+        "precipitation": 7.09,
+        "sunlight": 17.32,
+        "temperature": 25.27,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.01
+      },
+      {
+        "coordinates": {
+          "latitude": -15,
+          "longitude": -140
+        },
+        "humidity": 78.83,
+        "precipitation": 2.06,
+        "sunlight": 21.58,
+        "temperature": 26.65,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.43
+      },
+      {
+        "coordinates": {
+          "latitude": -43,
+          "longitude": 67
+        },
+        "humidity": 82.72,
+        "precipitation": 3.23,
+        "sunlight": 12.75,
+        "temperature": 11.36,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 8.38
+      },
+      {
+        "coordinates": {
+          "latitude": -1,
+          "longitude": 11.75
+        },
+        "humidity": 83.14,
+        "precipitation": 5.33,
+        "sunlight": 14.87,
+        "temperature": 24.73,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.06
+      },
+      {
+        "coordinates": {
+          "latitude": 13.4667,
+          "longitude": -16.5667
+        },
+        "humidity": 73.17,
+        "precipitation": 2.33,
+        "sunlight": 20.65,
+        "temperature": 25.25,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.23
+      },
+      {
+        "coordinates": {
+          "latitude": 42,
+          "longitude": 43.5
+        },
+        "humidity": 70.86,
+        "precipitation": 1.5,
+        "sunlight": 13.48,
+        "temperature": 10.4,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.24
+      },
+      {
+        "coordinates": {
+          "latitude": 51,
+          "longitude": 9
+        },
+        "humidity": 83.4,
+        "precipitation": 2.05,
+        "sunlight": 10.46,
+        "temperature": 8.36,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.92
+      },
+      {
+        "coordinates": {
+          "latitude": 8,
+          "longitude": -2
+        },
+        "humidity": 70.98,
+        "precipitation": 3.35,
+        "sunlight": 18.42,
+        "temperature": 26.81,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.88
+      },
+      {
+        "coordinates": {
+          "latitude": 36.1833,
+          "longitude": -5.3667
+        },
+        "humidity": 77.99,
+        "precipitation": 1.69,
+        "sunlight": 18.3,
+        "temperature": 18.19,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.72
+      },
+      {
+        "coordinates": {
+          "latitude": 39,
+          "longitude": 22
+        },
+        "humidity": 72.87,
+        "precipitation": 2.07,
+        "sunlight": 15.91,
+        "temperature": 12.47,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.06
+      },
+      {
+        "coordinates": {
+          "latitude": 72,
+          "longitude": -40
+        },
+        "humidity": 96.48,
+        "precipitation": 0.72,
+        "sunlight": 11.22,
+        "temperature": -27.17,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.18
+      },
+      {
+        "coordinates": {
+          "latitude": 12.1167,
+          "longitude": -61.6667
+        },
+        "humidity": 79.23,
+        "precipitation": 3.74,
+        "sunlight": 20.79,
+        "temperature": 27.59,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.95
+      },
+      {
+        "coordinates": {
+          "latitude": 16.25,
+          "longitude": -61.5833
+        },
+        "humidity": 77.16,
+        "precipitation": 3.15,
+        "sunlight": 20.27,
+        "temperature": 27.17,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.58
+      },
+      {
+        "coordinates": {
+          "latitude": 13.4667,
+          "longitude": 144.7833
+        },
+        "humidity": 79.94,
+        "precipitation": 4.29,
+        "sunlight": 20.22,
+        "temperature": 28.21,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.24
+      },
+      {
+        "coordinates": {
+          "latitude": 15.5,
+          "longitude": -90.25
+        },
+        "humidity": 83.27,
+        "precipitation": 4.47,
+        "sunlight": 17.22,
+        "temperature": 21.83,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.83
+      },
+      {
+        "coordinates": {
+          "latitude": 49.5,
+          "longitude": -2.56
+        },
+        "humidity": 84.27,
+        "precipitation": 2.4,
+        "sunlight": 12.02,
+        "temperature": 12.48,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 6.12
+      },
+      {
+        "coordinates": {
+          "latitude": 11,
+          "longitude": -10
+        },
+        "humidity": 64.0,
+        "precipitation": 4.44,
+        "sunlight": 20.57,
+        "temperature": 26.07,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.76
+      },
+      {
+        "coordinates": {
+          "latitude": 12,
+          "longitude": -15
+        },
+        "humidity": 68.22,
+        "precipitation": 4.84,
+        "sunlight": 20.51,
+        "temperature": 26.74,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.16
+      },
+      {
+        "coordinates": {
+          "latitude": 5,
+          "longitude": -59
+        },
+        "humidity": 80.96,
+        "precipitation": 4.77,
+        "sunlight": 17.65,
+        "temperature": 26.3,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.07
+      },
+      {
+        "coordinates": {
+          "latitude": 19,
+          "longitude": -72.4167
+        },
+        "humidity": 67.3,
+        "precipitation": 1.51,
+        "sunlight": 20.04,
+        "temperature": 27.03,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.05
+      },
+      {
+        "coordinates": {
+          "latitude": -53.1,
+          "longitude": 72.5167
+        },
+        "humidity": 85.99,
+        "precipitation": 3.36,
+        "sunlight": 9.03,
+        "temperature": 1.87,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 9.38
+      },
+      {
+        "coordinates": {
+          "latitude": 41.9,
+          "longitude": 12.45
+        },
+        "humidity": 70.32,
+        "precipitation": 2.22,
+        "sunlight": 16.32,
+        "temperature": 16.02,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.3
+      },
+      {
+        "coordinates": {
+          "latitude": 15,
+          "longitude": -86.5
+        },
+        "humidity": 79.36,
+        "precipitation": 3.65,
+        "sunlight": 17.76,
+        "temperature": 22.49,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.06
+      },
+      {
+        "coordinates": {
+          "latitude": 22.25,
+          "longitude": 114.1667
+        },
+        "humidity": 79.73,
+        "precipitation": 3.86,
+        "sunlight": 14.82,
+        "temperature": 23.39,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.53
+      },
+      {
+        "coordinates": {
+          "latitude": 47,
+          "longitude": 20
+        },
+        "humidity": 72.87,
+        "precipitation": 1.7,
+        "sunlight": 12.67,
+        "temperature": 11.92,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.4
+      },
+      {
+        "coordinates": {
+          "latitude": 65,
+          "longitude": -18
+        },
+        "humidity": 94.86,
+        "precipitation": 2.56,
+        "sunlight": 8.89,
+        "temperature": -2.99,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.61
+      },
+      {
+        "coordinates": {
+          "latitude": 20,
+          "longitude": 77
+        },
+        "humidity": 53.98,
+        "precipitation": 2.41,
+        "sunlight": 18.51,
+        "temperature": 26.26,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.49
+      },
+      {
+        "coordinates": {
+          "latitude": -5,
+          "longitude": 120
+        },
+        "humidity": 82.08,
+        "precipitation": 5.61,
+        "sunlight": 19.4,
+        "temperature": 25.27,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.42
+      },
+      {
+        "coordinates": {
+          "latitude": 32,
+          "longitude": 53
+        },
+        "humidity": 34.67,
+        "precipitation": 0.34,
+        "sunlight": 20.57,
+        "temperature": 16.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.84
+      },
+      {
+        "coordinates": {
+          "latitude": 33,
+          "longitude": 44
+        },
+        "humidity": 39.93,
+        "precipitation": 0.33,
+        "sunlight": 19.24,
+        "temperature": 23.77,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.92
+      },
+      {
+        "coordinates": {
+          "latitude": 53,
+          "longitude": -8
+        },
+        "humidity": 89.13,
+        "precipitation": 2.99,
+        "sunlight": 9.99,
+        "temperature": 9.36,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.57
+      },
+      {
+        "coordinates": {
+          "latitude": 54.23,
+          "longitude": -4.55
+        },
+        "humidity": 84.85,
+        "precipitation": 3.25,
+        "sunlight": 9.91,
+        "temperature": 10.71,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 6.23
+      },
+      {
+        "coordinates": {
+          "latitude": 31.5,
+          "longitude": 34.75
+        },
+        "humidity": 63.53,
+        "precipitation": 0.77,
+        "sunlight": 19.47,
+        "temperature": 19.58,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.12
+      },
+      {
+        "coordinates": {
+          "latitude": 42.8333,
+          "longitude": 12.8333
+        },
+        "humidity": 75.19,
+        "precipitation": 2.24,
+        "sunlight": 15.36,
+        "temperature": 12.21,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.06
+      },
+      {
+        "coordinates": {
+          "latitude": 18.25,
+          "longitude": -77.5
+        },
+        "humidity": 75.84,
+        "precipitation": 3.09,
+        "sunlight": 18.85,
+        "temperature": 26.62,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.51
+      },
+      {
+        "coordinates": {
+          "latitude": 36,
+          "longitude": 138
+        },
+        "humidity": 81.93,
+        "precipitation": 3.65,
+        "sunlight": 13.73,
+        "temperature": 8.29,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.0
+      },
+      {
+        "coordinates": {
+          "latitude": 49.21,
+          "longitude": -2.13
+        },
+        "humidity": 83.51,
+        "precipitation": 2.26,
+        "sunlight": 12.02,
+        "temperature": 12.28,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.06
+      },
+      {
+        "coordinates": {
+          "latitude": 31,
+          "longitude": 36
+        },
+        "humidity": 51.19,
+        "precipitation": 0.41,
+        "sunlight": 20.92,
+        "temperature": 18.02,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.29
+      },
+      {
+        "coordinates": {
+          "latitude": 48,
+          "longitude": 68
+        },
+        "humidity": 63.07,
+        "precipitation": 0.52,
+        "sunlight": 14.99,
+        "temperature": 5.79,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.35
+      },
+      {
+        "coordinates": {
+          "latitude": 1,
+          "longitude": 38
+        },
+        "humidity": 52.0,
+        "precipitation": 0.99,
+        "sunlight": 22.32,
+        "temperature": 27.43,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.01
+      },
+      {
+        "coordinates": {
+          "latitude": 1.4167,
+          "longitude": 173
+        },
+        "humidity": 79.93,
+        "precipitation": 4.57,
+        "sunlight": 21.33,
+        "temperature": 28.11,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.43
+      },
+      {
+        "coordinates": {
+          "latitude": 40,
+          "longitude": 127
+        },
+        "humidity": 78.49,
+        "precipitation": 2.97,
+        "sunlight": 14.27,
+        "temperature": 4.49,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.3
+      },
+      {
+        "coordinates": {
+          "latitude": 37,
+          "longitude": 127.5
+        },
+        "humidity": 76.47,
+        "precipitation": 3.26,
+        "sunlight": 13.83,
+        "temperature": 10.96,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.18
+      },
+      {
+        "coordinates": {
+          "latitude": 29.3375,
+          "longitude": 47.6581
+        },
+        "humidity": 29.91,
+        "precipitation": 0.08,
+        "sunlight": 20.37,
+        "temperature": 26.32,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.52
+      },
+      {
+        "coordinates": {
+          "latitude": 41,
+          "longitude": 75
+        },
+        "humidity": 59.47,
+        "precipitation": 0.81,
+        "sunlight": 16.28,
+        "temperature": 1.18,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.33
+      },
+      {
+        "coordinates": {
+          "latitude": 18,
+          "longitude": 105
+        },
+        "humidity": 81.78,
+        "precipitation": 5.08,
+        "sunlight": 14.14,
+        "temperature": 22.2,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.17
+      },
+      {
+        "coordinates": {
+          "latitude": 57,
+          "longitude": 25
+        },
+        "humidity": 88.34,
+        "precipitation": 2.16,
+        "sunlight": 9.98,
+        "temperature": 5.83,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.63
+      },
+      {
+        "coordinates": {
+          "latitude": 33.8333,
+          "longitude": 35.8333
+        },
+        "humidity": 64.35,
+        "precipitation": 1.28,
+        "sunlight": 19.06,
+        "temperature": 19.25,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.76
+      },
+      {
+        "coordinates": {
+          "latitude": -29.5,
+          "longitude": 28.5
+        },
+        "humidity": 61.34,
+        "precipitation": 2.89,
+        "sunlight": 20.15,
+        "temperature": 10.07,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.15
+      },
+      {
+        "coordinates": {
+          "latitude": 6.5,
+          "longitude": -9.5
+        },
+        "humidity": 86.07,
+        "precipitation": 6.06,
+        "sunlight": 16.62,
+        "temperature": 24.94,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.55
+      },
+      {
+        "coordinates": {
+          "latitude": 25,
+          "longitude": 17
+        },
+        "humidity": 28.78,
+        "precipitation": 0.05,
+        "sunlight": 22.76,
+        "temperature": 22.99,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.99
+      },
+      {
+        "coordinates": {
+          "latitude": 47.1667,
+          "longitude": 9.5333
+        },
+        "humidity": 83.86,
+        "precipitation": 4.11,
+        "sunlight": 12.16,
+        "temperature": 4.71,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.52
+      },
+      {
+        "coordinates": {
+          "latitude": 56,
+          "longitude": 24
+        },
+        "humidity": 87.0,
+        "precipitation": 1.89,
+        "sunlight": 10.13,
+        "temperature": 6.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.51
+      },
+      {
+        "coordinates": {
+          "latitude": 49.75,
+          "longitude": 6.1667
+        },
+        "humidity": 83.68,
+        "precipitation": 2.19,
+        "sunlight": 11.41,
+        "temperature": 8.74,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.89
+      },
+      {
+        "coordinates": {
+          "latitude": 22.1667,
+          "longitude": 113.55
+        },
+        "humidity": 82.6,
+        "precipitation": 4.75,
+        "sunlight": 14.45,
+        "temperature": 24.03,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.42
+      },
+      {
+        "coordinates": {
+          "latitude": 41.8333,
+          "longitude": 22
+        },
+        "humidity": 71.26,
+        "precipitation": 1.7,
+        "sunlight": 15.17,
+        "temperature": 11.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.78
+      },
+      {
+        "coordinates": {
+          "latitude": -20,
+          "longitude": 47
+        },
+        "humidity": 79.73,
+        "precipitation": 5.32,
+        "sunlight": 19.38,
+        "temperature": 16.75,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.14
+      },
+      {
+        "coordinates": {
+          "latitude": -13.5,
+          "longitude": 34
+        },
+        "humidity": 71.32,
+        "precipitation": 3.06,
+        "sunlight": 20.77,
+        "temperature": 20.61,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.55
+      },
+      {
+        "coordinates": {
+          "latitude": 2.5,
+          "longitude": 112.5
+        },
+        "humidity": 92.66,
+        "precipitation": 10.28,
+        "sunlight": 17.16,
+        "temperature": 25.59,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.1
+      },
+      {
+        "coordinates": {
+          "latitude": 3.25,
+          "longitude": 73
+        },
+        "humidity": 79.39,
+        "precipitation": 4.85,
+        "sunlight": 20.13,
+        "temperature": 27.96,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.99
+      },
+      {
+        "coordinates": {
+          "latitude": 17,
+          "longitude": -4
+        },
+        "humidity": 29.36,
+        "precipitation": 0.61,
+        "sunlight": 22.97,
+        "temperature": 28.32,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.14
+      },
+      {
+        "coordinates": {
+          "latitude": 35.8333,
+          "longitude": 14.5833
+        },
+        "humidity": 76.37,
+        "precipitation": 1.59,
+        "sunlight": 18.19,
+        "temperature": 19.92,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.78
+      },
+      {
+        "coordinates": {
+          "latitude": 9,
+          "longitude": 168
+        },
+        "humidity": 80.76,
+        "precipitation": 4.8,
+        "sunlight": 20.25,
+        "temperature": 28.05,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.76
+      },
+      {
+        "coordinates": {
+          "latitude": 14.6667,
+          "longitude": -61
+        },
+        "humidity": 77.51,
+        "precipitation": 3.49,
+        "sunlight": 20.56,
+        "temperature": 27.47,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 6.02
+      },
+      {
+        "coordinates": {
+          "latitude": 20,
+          "longitude": -12
+        },
+        "humidity": 26.58,
+        "precipitation": 0.76,
+        "sunlight": 22.59,
+        "temperature": 26.44,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.4
+      },
+      {
+        "coordinates": {
+          "latitude": -20.2833,
+          "longitude": 57.55
+        },
+        "humidity": 74.31,
+        "precipitation": 1.86,
+        "sunlight": 20.03,
+        "temperature": 24.92,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.57
+      },
+      {
+        "coordinates": {
+          "latitude": -12.8333,
+          "longitude": 45.1667
+        },
+        "humidity": 75.78,
+        "precipitation": 2.68,
+        "sunlight": 20.72,
+        "temperature": 27.09,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.56
+      },
+      {
+        "coordinates": {
+          "latitude": 23,
+          "longitude": -102
+        },
+        "humidity": 54.71,
+        "precipitation": 1.15,
+        "sunlight": 21.72,
+        "temperature": 16.8,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.09
+      },
+      {
+        "coordinates": {
+          "latitude": 6.9167,
+          "longitude": 158.25
+        },
+        "humidity": 80.81,
+        "precipitation": 7.84,
+        "sunlight": 18.54,
+        "temperature": 28.24,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.83
+      },
+      {
+        "coordinates": {
+          "latitude": 47,
+          "longitude": 29
+        },
+        "humidity": 72.46,
+        "precipitation": 1.49,
+        "sunlight": 13.0,
+        "temperature": 10.56,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.71
+      },
+      {
+        "coordinates": {
+          "latitude": 43.7333,
+          "longitude": 7.4
+        },
+        "humidity": 74.12,
+        "precipitation": 2.23,
+        "sunlight": 15.48,
+        "temperature": 16.83,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.52
+      },
+      {
+        "coordinates": {
+          "latitude": 46,
+          "longitude": 105
+        },
+        "humidity": 53.93,
+        "precipitation": 0.47,
+        "sunlight": 16.24,
+        "temperature": 1.98,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.23
+      },
+      {
+        "coordinates": {
+          "latitude": 42,
+          "longitude": 19
+        },
+        "humidity": 71.26,
+        "precipitation": 3.43,
+        "sunlight": 14.17,
+        "temperature": 17.71,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.52
+      },
+      {
+        "coordinates": {
+          "latitude": 16.75,
+          "longitude": -62.2
+        },
+        "humidity": 77.43,
+        "precipitation": 2.55,
+        "sunlight": 21.37,
+        "temperature": 27.31,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.68
+      },
+      {
+        "coordinates": {
+          "latitude": 32,
+          "longitude": -5
+        },
+        "humidity": 44.94,
+        "precipitation": 0.96,
+        "sunlight": 20.31,
+        "temperature": 14.86,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.32
+      },
+      {
+        "coordinates": {
+          "latitude": -18.25,
+          "longitude": 35
+        },
+        "humidity": 68.93,
+        "precipitation": 3.11,
+        "sunlight": 19.43,
+        "temperature": 25.48,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.29
+      },
+      {
+        "coordinates": {
+          "latitude": 22,
+          "longitude": 98
+        },
+        "humidity": 67.37,
+        "precipitation": 2.39,
+        "sunlight": 17.07,
+        "temperature": 22.34,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.14
+      },
+      {
+        "coordinates": {
+          "latitude": -22,
+          "longitude": 17
+        },
+        "humidity": 34.0,
+        "precipitation": 1.08,
+        "sunlight": 22.71,
+        "temperature": 21.68,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.79
+      },
+      {
+        "coordinates": {
+          "latitude": -0.5333,
+          "longitude": 166.9167
+        },
+        "humidity": 79.26,
+        "precipitation": 4.63,
+        "sunlight": 21.31,
+        "temperature": 28.23,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.86
+      },
+      {
+        "coordinates": {
+          "latitude": 28,
+          "longitude": 84
+        },
+        "humidity": 62.8,
+        "precipitation": 4.81,
+        "sunlight": 16.19,
+        "temperature": 19.18,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.5
+      },
+      {
+        "coordinates": {
+          "latitude": 52.5,
+          "longitude": 5.75
+        },
+        "humidity": 84.2,
+        "precipitation": 2.12,
+        "sunlight": 10.54,
+        "temperature": 10.12,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.44
+      },
+      {
+        "coordinates": {
+          "latitude": 12.25,
+          "longitude": -68.75
+        },
+        "humidity": 81.8,
+        "precipitation": 1.17,
+        "sunlight": 20.9,
+        "temperature": 27.58,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 6.8
+      },
+      {
+        "coordinates": {
+          "latitude": -21.5,
+          "longitude": 165.5
+        },
+        "humidity": 73.6,
+        "precipitation": 2.76,
+        "sunlight": 18.78,
+        "temperature": 23.75,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.35
+      },
+      {
+        "coordinates": {
+          "latitude": -41,
+          "longitude": 174
+        },
+        "humidity": 80.95,
+        "precipitation": 2.71,
+        "sunlight": 15.87,
+        "temperature": 13.6,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.2
+      },
+      {
+        "coordinates": {
+          "latitude": 13,
+          "longitude": -85
+        },
+        "humidity": 80.38,
+        "precipitation": 3.71,
+        "sunlight": 16.67,
+        "temperature": 25.69,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.67
+      },
+      {
+        "coordinates": {
+          "latitude": 16,
+          "longitude": 8
+        },
+        "humidity": 27.14,
+        "precipitation": 0.58,
+        "sunlight": 23.08,
+        "temperature": 27.07,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.15
+      },
+      {
+        "coordinates": {
+          "latitude": 10,
+          "longitude": 8
+        },
+        "humidity": 59.99,
+        "precipitation": 4.21,
+        "sunlight": 20.38,
+        "temperature": 24.61,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.02
+      },
+      {
+        "coordinates": {
+          "latitude": -19.0333,
+          "longitude": -169.8667
+        },
+        "humidity": 80.34,
+        "precipitation": 4.3,
+        "sunlight": 18.67,
+        "temperature": 26.07,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.53
+      },
+      {
+        "coordinates": {
+          "latitude": -29.0333,
+          "longitude": 167.95
+        },
+        "humidity": 76.82,
+        "precipitation": 2.11,
+        "sunlight": 18.48,
+        "temperature": 20.48,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.67
+      },
+      {
+        "coordinates": {
+          "latitude": 15.2,
+          "longitude": 145.75
+        },
+        "humidity": 79.76,
+        "precipitation": 3.79,
+        "sunlight": 20.52,
+        "temperature": 28.12,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.49
+      },
+      {
+        "coordinates": {
+          "latitude": 62,
+          "longitude": 10
+        },
+        "humidity": 90.75,
+        "precipitation": 2.78,
+        "sunlight": 8.83,
+        "temperature": -1.1,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.76
+      },
+      {
+        "coordinates": {
+          "latitude": 21,
+          "longitude": 57
+        },
+        "humidity": 40.45,
+        "precipitation": 0.2,
+        "sunlight": 22.56,
+        "temperature": 29.06,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.05
+      },
+      {
+        "coordinates": {
+          "latitude": 30,
+          "longitude": 70
+        },
+        "humidity": 33.41,
+        "precipitation": 0.77,
+        "sunlight": 18.07,
+        "temperature": 22.45,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.22
+      },
+      {
+        "coordinates": {
+          "latitude": 7.5,
+          "longitude": 134.5
+        },
+        "humidity": 81.11,
+        "precipitation": 8.19,
+        "sunlight": 18.74,
+        "temperature": 28.15,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.38
+      },
+      {
+        "coordinates": {
+          "latitude": 32,
+          "longitude": 35.25
+        },
+        "humidity": 66.6,
+        "precipitation": 1.16,
+        "sunlight": 19.62,
+        "temperature": 19.81,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.2
+      },
+      {
+        "coordinates": {
+          "latitude": 9,
+          "longitude": -80
+        },
+        "humidity": 83.14,
+        "precipitation": 5.25,
+        "sunlight": 16.03,
+        "temperature": 26.73,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.77
+      },
+      {
+        "coordinates": {
+          "latitude": -6,
+          "longitude": 147
+        },
+        "humidity": 83.91,
+        "precipitation": 3.89,
+        "sunlight": 18.03,
+        "temperature": 22.68,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.56
+      },
+      {
+        "coordinates": {
+          "latitude": -23,
+          "longitude": -58
+        },
+        "humidity": 68.76,
+        "precipitation": 3.87,
+        "sunlight": 18.07,
+        "temperature": 24.74,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.51
+      },
+      {
+        "coordinates": {
+          "latitude": -10,
+          "longitude": -76
+        },
+        "humidity": 81.74,
+        "precipitation": 2.07,
+        "sunlight": 15.1,
+        "temperature": 9.77,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.13
+      },
+      {
+        "coordinates": {
+          "latitude": 13,
+          "longitude": 122
+        },
+        "humidity": 80.5,
+        "precipitation": 6.48,
+        "sunlight": 18.29,
+        "temperature": 28.01,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.49
+      },
+      {
+        "coordinates": {
+          "latitude": -24.7,
+          "longitude": -127.4
+        },
+        "humidity": 79.08,
+        "precipitation": 3.34,
+        "sunlight": 18.91,
+        "temperature": 23.29,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.28
+      },
+      {
+        "coordinates": {
+          "latitude": 52,
+          "longitude": 20
+        },
+        "humidity": 79.26,
+        "precipitation": 1.72,
+        "sunlight": 10.73,
+        "temperature": 8.9,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.99
+      },
+      {
+        "coordinates": {
+          "latitude": 39.5,
+          "longitude": -8
+        },
+        "humidity": 70.59,
+        "precipitation": 2.0,
+        "sunlight": 17.3,
+        "temperature": 15.74,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.61
+      },
+      {
+        "coordinates": {
+          "latitude": 18.25,
+          "longitude": -66.5
+        },
+        "humidity": 77.09,
+        "precipitation": 3.08,
+        "sunlight": 19.01,
+        "temperature": 26.89,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.85
+      },
+      {
+        "coordinates": {
+          "latitude": 25.5,
+          "longitude": 51.25
+        },
+        "humidity": 51.14,
+        "precipitation": 0.13,
+        "sunlight": 18.66,
+        "temperature": 27.95,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.35
+      },
+      {
+        "coordinates": {
+          "latitude": -21.1,
+          "longitude": 55.6
+        },
+        "humidity": 77.53,
+        "precipitation": 2.04,
+        "sunlight": 19.83,
+        "temperature": 21.94,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.4
+      },
+      {
+        "coordinates": {
+          "latitude": 46,
+          "longitude": 25
+        },
+        "humidity": 76.48,
+        "precipitation": 1.99,
+        "sunlight": 12.97,
+        "temperature": 9.35,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.84
+      },
+      {
+        "coordinates": {
+          "latitude": 60,
+          "longitude": 100
+        },
+        "humidity": 89.26,
+        "precipitation": 1.45,
+        "sunlight": 9.96,
+        "temperature": -4.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.44
+      },
+      {
+        "coordinates": {
+          "latitude": -2,
+          "longitude": 30
+        },
+        "humidity": 74.94,
+        "precipitation": 3.53,
+        "sunlight": 17.92,
+        "temperature": 19.8,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.3
+      },
+      {
+        "coordinates": {
+          "latitude": -15.9333,
+          "longitude": -5.7
+        },
+        "humidity": 77.14,
+        "precipitation": 0.15,
+        "sunlight": 19.49,
+        "temperature": 21.88,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.82
+      },
+      {
+        "coordinates": {
+          "latitude": 17.3333,
+          "longitude": -62.75
+        },
+        "humidity": 77.7,
+        "precipitation": 2.21,
+        "sunlight": 20.77,
+        "temperature": 27.2,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.66
+      },
+      {
+        "coordinates": {
+          "latitude": 13.8833,
+          "longitude": -61.1333
+        },
+        "humidity": 77.23,
+        "precipitation": 3.1,
+        "sunlight": 20.86,
+        "temperature": 27.6,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 6.02
+      },
+      {
+        "coordinates": {
+          "latitude": 46.8333,
+          "longitude": -56.3333
+        },
+        "humidity": 85.54,
+        "precipitation": 3.08,
+        "sunlight": 11.47,
+        "temperature": 6.32,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.34
+      },
+      {
+        "coordinates": {
+          "latitude": 13.25,
+          "longitude": -61.2
+        },
+        "humidity": 78.47,
+        "precipitation": 2.77,
+        "sunlight": 20.86,
+        "temperature": 27.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.94
+      },
+      {
+        "coordinates": {
+          "latitude": -13.5833,
+          "longitude": -172.3333
+        },
+        "humidity": 79.8,
+        "precipitation": 5.61,
+        "sunlight": 18.85,
+        "temperature": 27.66,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.38
+      },
+      {
+        "coordinates": {
+          "latitude": 43.7667,
+          "longitude": 12.4167
+        },
+        "humidity": 74.18,
+        "precipitation": 2.18,
+        "sunlight": 14.42,
+        "temperature": 14.74,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.83
+      },
+      {
+        "coordinates": {
+          "latitude": 1,
+          "longitude": 7
+        },
+        "humidity": 82.85,
+        "precipitation": 3.59,
+        "sunlight": 15.36,
+        "temperature": 26.75,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.77
+      },
+      {
+        "coordinates": {
+          "latitude": 25,
+          "longitude": 45
+        },
+        "humidity": 24.47,
+        "precipitation": 0.08,
+        "sunlight": 22.18,
+        "temperature": 25.35,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.0
+      },
+      {
+        "coordinates": {
+          "latitude": 14,
+          "longitude": -14
+        },
+        "humidity": 45.1,
+        "precipitation": 1.78,
+        "sunlight": 21.32,
+        "temperature": 29.14,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.57
+      },
+      {
+        "coordinates": {
+          "latitude": 44,
+          "longitude": 21
+        },
+        "humidity": 75.45,
+        "precipitation": 2.08,
+        "sunlight": 13.29,
+        "temperature": 11.14,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.76
+      },
+      {
+        "coordinates": {
+          "latitude": -4.5833,
+          "longitude": 55.6667
+        },
+        "humidity": 80.42,
+        "precipitation": 3.84,
+        "sunlight": 20.96,
+        "temperature": 27.37,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.44
+      },
+      {
+        "coordinates": {
+          "latitude": 8.5,
+          "longitude": -11.5
+        },
+        "humidity": 76.69,
+        "precipitation": 7.32,
+        "sunlight": 17.95,
+        "temperature": 25.38,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.69
+      },
+      {
+        "coordinates": {
+          "latitude": 1.3667,
+          "longitude": 103.8
+        },
+        "humidity": 83.84,
+        "precipitation": 6.36,
+        "sunlight": 16.61,
+        "temperature": 27.23,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.94
+      },
+      {
+        "coordinates": {
+          "latitude": 48.6667,
+          "longitude": 19.5
+        },
+        "humidity": 80.61,
+        "precipitation": 2.22,
+        "sunlight": 11.79,
+        "temperature": 8.09,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.29
+      },
+      {
+        "coordinates": {
+          "latitude": 46,
+          "longitude": 15
+        },
+        "humidity": 80.87,
+        "precipitation": 2.97,
+        "sunlight": 12.5,
+        "temperature": 9.86,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.66
+      },
+      {
+        "coordinates": {
+          "latitude": -8,
+          "longitude": 159
+        },
+        "humidity": 81.06,
+        "precipitation": 8.73,
+        "sunlight": 17.81,
+        "temperature": 28.01,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.9
+      },
+      {
+        "coordinates": {
+          "latitude": 10,
+          "longitude": 49
+        },
+        "humidity": 53.87,
+        "precipitation": 0.28,
+        "sunlight": 24.08,
+        "temperature": 24.26,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.68
+      },
+      {
+        "coordinates": {
+          "latitude": -29,
+          "longitude": 24
+        },
+        "humidity": 34.59,
+        "precipitation": 0.6,
+        "sunlight": 21.29,
+        "temperature": 20.25,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.79
+      },
+      {
+        "coordinates": {
+          "latitude": -54.5,
+          "longitude": -37
+        },
+        "humidity": 89.8,
+        "precipitation": 3.44,
+        "sunlight": 8.26,
+        "temperature": 0.46,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 7.32
+      },
+      {
+        "coordinates": {
+          "latitude": 8,
+          "longitude": 30
+        },
+        "humidity": 55.39,
+        "precipitation": 2.91,
+        "sunlight": 19.91,
+        "temperature": 28.42,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.0
+      },
+      {
+        "coordinates": {
+          "latitude": 40,
+          "longitude": -4
+        },
+        "humidity": 60.94,
+        "precipitation": 1.07,
+        "sunlight": 17.0,
+        "temperature": 14.88,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.42
+      },
+      {
+        "coordinates": {
+          "latitude": 7,
+          "longitude": 81
+        },
+        "humidity": 82.66,
+        "precipitation": 5.43,
+        "sunlight": 19.11,
+        "temperature": 24.68,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.19
+      },
+      {
+        "coordinates": {
+          "latitude": 15,
+          "longitude": 30
+        },
+        "humidity": 26.42,
+        "precipitation": 0.47,
+        "sunlight": 24.02,
+        "temperature": 27.37,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.47
+      },
+      {
+        "coordinates": {
+          "latitude": 4,
+          "longitude": -56
+        },
+        "humidity": 83.79,
+        "precipitation": 5.47,
+        "sunlight": 19.16,
+        "temperature": 25.52,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.03
+      },
+      {
+        "coordinates": {
+          "latitude": 78,
+          "longitude": 20
+        },
+        "humidity": 92.87,
+        "precipitation": 1.58,
+        "sunlight": 7.39,
+        "temperature": -5.35,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.14
+      },
+      {
+        "coordinates": {
+          "latitude": -26.5,
+          "longitude": 31.5
+        },
+        "humidity": 63.84,
+        "precipitation": 2.12,
+        "sunlight": 17.59,
+        "temperature": 19.58,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.84
+      },
+      {
+        "coordinates": {
+          "latitude": 62,
+          "longitude": 15
+        },
+        "humidity": 90.67,
+        "precipitation": 2.36,
+        "sunlight": 8.78,
+        "temperature": 2.78,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.13
+      },
+      {
+        "coordinates": {
+          "latitude": 47,
+          "longitude": 8
+        },
+        "humidity": 80.29,
+        "precipitation": 3.7,
+        "sunlight": 12.16,
+        "temperature": 7.79,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.63
+      },
+      {
+        "coordinates": {
+          "latitude": 35,
+          "longitude": 38
+        },
+        "humidity": 56.79,
+        "precipitation": 0.49,
+        "sunlight": 18.65,
+        "temperature": 16.48,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.24
+      },
+      {
+        "coordinates": {
+          "latitude": 23.5,
+          "longitude": 121
+        },
+        "humidity": 83.96,
+        "precipitation": 5.18,
+        "sunlight": 13.94,
+        "temperature": 19.31,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.51
+      },
+      {
+        "coordinates": {
+          "latitude": 39,
+          "longitude": 71
+        },
+        "humidity": 60.65,
+        "precipitation": 0.91,
+        "sunlight": 15.98,
+        "temperature": -0.07,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.82
+      },
+      {
+        "coordinates": {
+          "latitude": -6,
+          "longitude": 35
+        },
+        "humidity": 65.73,
+        "precipitation": 2.93,
+        "sunlight": 21.89,
+        "temperature": 22.97,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.59
+      },
+      {
+        "coordinates": {
+          "latitude": 15,
+          "longitude": 100
+        },
+        "humidity": 69.45,
+        "precipitation": 3.34,
+        "sunlight": 18.71,
+        "temperature": 28.07,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.76
+      },
+      {
+        "coordinates": {
+          "latitude": -8.55,
+          "longitude": 125.5167
+        },
+        "humidity": 72.55,
+        "precipitation": 2.75,
+        "sunlight": 20.36,
+        "temperature": 27.02,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.84
+      },
+      {
+        "coordinates": {
+          "latitude": 8,
+          "longitude": 1.1667
+        },
+        "humidity": 77.52,
+        "precipitation": 4.08,
+        "sunlight": 18.35,
+        "temperature": 25.9,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.56
+      },
+      {
+        "coordinates": {
+          "latitude": -9,
+          "longitude": -172
+        },
+        "humidity": 79.8,
+        "precipitation": 6.17,
+        "sunlight": 20.01,
+        "temperature": 28.32,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.73
+      },
+      {
+        "coordinates": {
+          "latitude": -20,
+          "longitude": -175
+        },
+        "humidity": 80.27,
+        "precipitation": 4.59,
+        "sunlight": 18.79,
+        "temperature": 25.37,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.58
+      },
+      {
+        "coordinates": {
+          "latitude": 11,
+          "longitude": -61
+        },
+        "humidity": 79.56,
+        "precipitation": 4.11,
+        "sunlight": 20.58,
+        "temperature": 27.44,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.72
+      },
+      {
+        "coordinates": {
+          "latitude": 34,
+          "longitude": 9
+        },
+        "humidity": 47.88,
+        "precipitation": 0.29,
+        "sunlight": 19.47,
+        "temperature": 20.87,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.07
+      },
+      {
+        "coordinates": {
+          "latitude": 39,
+          "longitude": 35
+        },
+        "humidity": 61.77,
+        "precipitation": 1.08,
+        "sunlight": 16.92,
+        "temperature": 11.44,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.34
+      },
+      {
+        "coordinates": {
+          "latitude": 40,
+          "longitude": 60
+        },
+        "humidity": 43.78,
+        "precipitation": 0.33,
+        "sunlight": 17.24,
+        "temperature": 14.99,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.11
+      },
+      {
+        "coordinates": {
+          "latitude": 21.75,
+          "longitude": -71.5833
+        },
+        "humidity": 77.15,
+        "precipitation": 1.55,
+        "sunlight": 20.21,
+        "temperature": 26.88,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.64
+      },
+      {
+        "coordinates": {
+          "latitude": -8,
+          "longitude": 178
+        },
+        "humidity": 79.88,
+        "precipitation": 6.79,
+        "sunlight": 19.59,
+        "temperature": 28.46,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.47
+      },
+      {
+        "coordinates": {
+          "latitude": 1,
+          "longitude": 32
+        },
+        "humidity": 73.18,
+        "precipitation": 3.45,
+        "sunlight": 20.75,
+        "temperature": 22.73,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 1.56
+      },
+      {
+        "coordinates": {
+          "latitude": 49,
+          "longitude": 32
+        },
+        "humidity": 74.4,
+        "precipitation": 1.45,
+        "sunlight": 12.62,
+        "temperature": 9.2,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.86
+      },
+      {
+        "coordinates": {
+          "latitude": 24,
+          "longitude": 54
+        },
+        "humidity": 52.41,
+        "precipitation": 0.08,
+        "sunlight": 20.91,
+        "temperature": 28.66,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.96
+      },
+      {
+        "coordinates": {
+          "latitude": 54,
+          "longitude": -2
+        },
+        "humidity": 89.81,
+        "precipitation": 2.76,
+        "sunlight": 9.46,
+        "temperature": 8.05,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.45
+      },
+      {
+        "coordinates": {
+          "latitude": 38,
+          "longitude": -97
+        },
+        "humidity": 68.57,
+        "precipitation": 2.4,
+        "sunlight": 16.05,
+        "temperature": 13.61,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.49
+      },
+      {
+        "coordinates": {
+          "latitude": 19.2833,
+          "longitude": 166.6
+        },
+        "humidity": 78.2,
+        "precipitation": 1.68,
+        "sunlight": 21.09,
+        "temperature": 26.92,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.58
+      },
+      {
+        "coordinates": {
+          "latitude": -33,
+          "longitude": -56
+        },
+        "humidity": 77.23,
+        "precipitation": 3.76,
+        "sunlight": 17.26,
+        "temperature": 17.33,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.06
+      },
+      {
+        "coordinates": {
+          "latitude": 41,
+          "longitude": 64
+        },
+        "humidity": 43.16,
+        "precipitation": 0.29,
+        "sunlight": 17.23,
+        "temperature": 13.85,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 3.43
+      },
+      {
+        "coordinates": {
+          "latitude": -16,
+          "longitude": 167
+        },
+        "humidity": 78.86,
+        "precipitation": 5.19,
+        "sunlight": 18.26,
+        "temperature": 26.81,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.23
+      },
+      {
+        "coordinates": {
+          "latitude": 8,
+          "longitude": -66
+        },
+        "humidity": 70.35,
+        "precipitation": 3.66,
+        "sunlight": 19.57,
+        "temperature": 28.31,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.73
+      },
+      {
+        "coordinates": {
+          "latitude": 16,
+          "longitude": 106
+        },
+        "humidity": 78.01,
+        "precipitation": 4.15,
+        "sunlight": 15.85,
+        "temperature": 24.8,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 0.52
+      },
+      {
+        "coordinates": {
+          "latitude": 18.5,
+          "longitude": -64.5
+        },
+        "humidity": 77.05,
+        "precipitation": 1.86,
+        "sunlight": 20.61,
+        "temperature": 27.3,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.45
+      },
+      {
+        "coordinates": {
+          "latitude": 18.3333,
+          "longitude": -64.8333
+        },
+        "humidity": 76.95,
+        "precipitation": 2.44,
+        "sunlight": 20.61,
+        "temperature": 27.37,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.35
+      },
+      {
+        "coordinates": {
+          "latitude": -13.3,
+          "longitude": -176.2
+        },
+        "humidity": 80.82,
+        "precipitation": 6.09,
+        "sunlight": 19.12,
+        "temperature": 27.96,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 5.05
+      },
+      {
+        "coordinates": {
+          "latitude": 24.5,
+          "longitude": -13
+        },
+        "humidity": 43.08,
+        "precipitation": 0.22,
+        "sunlight": 22.1,
+        "temperature": 23.05,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 4.11
+      },
+      {
+        "coordinates": {
+          "latitude": 15,
+          "longitude": 48
+        },
+        "humidity": 42.48,
+        "precipitation": 0.02,
+        "sunlight": 24.09,
+        "temperature": 23.6,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.68
+      },
+      {
+        "coordinates": {
+          "latitude": -15,
+          "longitude": 30
+        },
+        "humidity": 56.43,
+        "precipitation": 2.08,
+        "sunlight": 20.37,
+        "temperature": 24.68,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.2
+      },
+      {
+        "coordinates": {
+          "latitude": -20,
+          "longitude": 30
+        },
+        "humidity": 56.94,
+        "precipitation": 1.77,
+        "sunlight": 20.95,
+        "temperature": 20.76,
+        "units": {
+          "humidity": "%",
+          "precipitation": "mm/day",
+          "sunlight": "MJ/m\u00b2/day",
+          "temperature": "\u00b0C",
+          "wind_speed": "m/s"
+        },
+        "wind_speed": 2.44
+      }
+    ]
+  }
+  

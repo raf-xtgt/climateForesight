@@ -22,6 +22,9 @@ import countryData from '../../../public/data/country_coordinates.json'
 import { getClimateData } from '@/services/climateService'
 import { ClimateData } from '@/models/climateData'
 import { createTemperatureImageryLayer } from './imageryLayers/points/temperatureImageryLayer'
+import sampleClimatedata from '../../../public/data/sample_climate_data.json'
+import { ScreenSpaceEventHandler } from 'cesium'
+
 
 if (typeof window !== 'undefined') {
   window.CESIUM_BASE_URL = '/cesium/'
@@ -35,13 +38,17 @@ interface CountryData {
   longitude: number
 }
 
+interface ExtendedViewer extends Viewer {
+  _temperatureLayerHandler?: ScreenSpaceEventHandler;
+}
+
 // Add this function inside your GlobeViewer component
 const fetchAndRenderClimateDataAsPoints = async (viewer: Viewer) => {
   try {
     // Fetch climate data for all countries
-    const response = await getClimateData()
+    // const response = await getClimateData()
     
-    const climateData: ClimateData[] = response.data
+    const climateData: ClimateData[] = sampleClimatedata.data
     console.log("climateData", climateData)
     // Create temperature visualization
     createTemperatureImageryLayer(viewer, climateData)
@@ -54,6 +61,21 @@ const fetchAndRenderClimateDataAsPoints = async (viewer: Viewer) => {
   }
 }
 
+const fetchAndRenderClimateDataAsGradient = async (viewer: Viewer) => {
+  try {
+    const climateData: ClimateData[] = sampleClimatedata.data;
+    console.log("climateData", climateData);
+    
+    // Create temperature visualization as continuous gradient
+    const temperatureLayer = await createTemperatureImageryLayer(viewer, climateData);
+    
+    // Store the handler using type assertion
+    (viewer as ExtendedViewer)._temperatureLayerHandler = temperatureLayer.handler;
+    
+  } catch (error) {
+    console.error('Error rendering climate data:', error);
+  }
+};
 
 export default function GlobeViewer() {
   const cesiumContainer = useRef<HTMLDivElement>(null)
@@ -127,7 +149,7 @@ export default function GlobeViewer() {
           })
         })
 
-        fetchAndRenderClimateDataAsPoints(viewerRef.current)
+        fetchAndRenderClimateDataAsGradient(viewerRef.current)
 
 
         // Add event listener to handle zoom changes
@@ -143,9 +165,14 @@ export default function GlobeViewer() {
 
     initializeViewer()
 
+    // In GlobeViewer.tsx cleanup
     return () => {
-      viewerRef.current?.destroy()
-      viewerRef.current = null
+      if (viewerRef.current) {
+        // Revoke any blob URLs used by imagery providers
+        viewerRef.current.imageryLayers.removeAll();
+      }
+      viewerRef.current?.destroy();
+      viewerRef.current = null;
     }
   }, [])
 

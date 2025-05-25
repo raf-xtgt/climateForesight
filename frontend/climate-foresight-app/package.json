@@ -13,6 +13,7 @@
     "@emotion/react": "^11.14.0",
     "@types/cesium": "^1.67.14",
     "cesium": "^1.129.0",
+    "d3-delaunay": "^6.0.4",
     "framer-motion": "^12.9.4",
     "next": "15.3.2",
     "next-themes": "^0.4.6",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/d3-delaunay": "^6.0.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
