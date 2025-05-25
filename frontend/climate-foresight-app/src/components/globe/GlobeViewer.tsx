@@ -21,7 +21,7 @@ import './cesium-overrides.css'
 import countryData from '../../../public/data/country_coordinates.json'
 import { getClimateData } from '@/services/climateService'
 import { ClimateData } from '@/models/climateData'
-import { createTemperatureImageryLayer } from './imageryLayers/temperatureImageryLayer'
+import { createTemperatureImageryLayer } from './imageryLayers/points/temperatureImageryLayer'
 
 if (typeof window !== 'undefined') {
   window.CESIUM_BASE_URL = '/cesium/'
@@ -36,7 +36,7 @@ interface CountryData {
 }
 
 // Add this function inside your GlobeViewer component
-const fetchAndRenderClimateData = async (viewer: Viewer) => {
+const fetchAndRenderClimateDataAsPoints = async (viewer: Viewer) => {
   try {
     // Fetch climate data for all countries
     const response = await getClimateData()
@@ -127,7 +127,7 @@ export default function GlobeViewer() {
           })
         })
 
-        fetchAndRenderClimateData(viewerRef.current)
+        fetchAndRenderClimateDataAsPoints(viewerRef.current)
 
 
         // Add event listener to handle zoom changes
