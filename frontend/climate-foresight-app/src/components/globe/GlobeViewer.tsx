@@ -19,11 +19,6 @@ import {
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './cesium-overrides.css'
 import countryData from '../../../public/data/country_coordinates.json'
-import { getClimateData } from '@/services/climateService'
-import { ClimateData } from '@/models/climateData'
-import { createTemperatureImageryLayer } from './imageryLayers/points/temperatureImageryLayer'
-import sampleClimatedata from '../../../public/data/sample_climate_data.json'
-import { ScreenSpaceEventHandler } from 'cesium'
 
 
 if (typeof window !== 'undefined') {
@@ -38,44 +33,7 @@ interface CountryData {
   longitude: number
 }
 
-interface ExtendedViewer extends Viewer {
-  _temperatureLayerHandler?: ScreenSpaceEventHandler;
-}
 
-// Add this function inside your GlobeViewer component
-const fetchAndRenderClimateDataAsPoints = async (viewer: Viewer) => {
-  try {
-    // Fetch climate data for all countries
-    // const response = await getClimateData()
-    
-    const climateData: ClimateData[] = sampleClimatedata.data
-    console.log("climateData", climateData)
-    // Create temperature visualization
-    createTemperatureImageryLayer(viewer, climateData)
-    
-    // You can add similar heatmaps for other parameters
-    // by creating additional entities with different color schemes
-    
-  } catch (error) {
-    console.error('Error fetching climate data:', error)
-  }
-}
-
-const fetchAndRenderClimateDataAsGradient = async (viewer: Viewer) => {
-  try {
-    const climateData: ClimateData[] = sampleClimatedata.data;
-    console.log("climateData", climateData);
-    
-    // Create temperature visualization as continuous gradient
-    const temperatureLayer = await createTemperatureImageryLayer(viewer, climateData);
-    
-    // Store the handler using type assertion
-    (viewer as ExtendedViewer)._temperatureLayerHandler = temperatureLayer.handler;
-    
-  } catch (error) {
-    console.error('Error rendering climate data:', error);
-  }
-};
 
 export default function GlobeViewer() {
   const cesiumContainer = useRef<HTMLDivElement>(null)
@@ -149,7 +107,6 @@ export default function GlobeViewer() {
           })
         })
 
-        fetchAndRenderClimateDataAsGradient(viewerRef.current)
 
 
         // Add event listener to handle zoom changes

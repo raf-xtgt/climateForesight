@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 from flask_cors import CORS
 from api.controller.climate_controller import climate_control_bp
+from api.controller.climate_controller_v2 import climate_control_bp_v2
 
 app = Flask(__name__)
 CORS(app, resources={
@@ -13,7 +14,8 @@ CORS(app, resources={
     }
 })
 
-app.register_blueprint(climate_control_bp, url_prefix='/api')
+# app.register_blueprint(climate_control_bp, url_prefix='/api')
+app.register_blueprint(climate_control_bp_v2, url_prefix='/api')
 
 
 @app.route('/test', methods=['POST'])
