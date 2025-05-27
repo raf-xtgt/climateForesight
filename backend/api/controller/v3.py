@@ -109,7 +109,7 @@ class AdvancedClimateService:
         """Generate heatmap image for climate data"""
         if not data:
             return None
-            
+    
         # Create coordinate arrays
         lats = np.array([point['lat'] for point in data])
         lons = np.array([point['lon'] for point in data])

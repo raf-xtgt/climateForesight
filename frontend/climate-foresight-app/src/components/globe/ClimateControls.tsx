@@ -29,7 +29,7 @@ export default function ClimateControls({ onVisualize, onReset }: ClimateControl
 
   const climateMetrics = [
     { value: 'temperature', label: 'Temperature' },
-    { value: 'rainfall', label: 'Rainfall' },
+    { value: 'precipitation', label: 'Rainfall' },
     { value: 'sunlight', label: 'Sunlight' },
     { value: 'humidity', label: 'Humidity' },
     { value: 'wind-speed', label: 'Wind Speed' },
