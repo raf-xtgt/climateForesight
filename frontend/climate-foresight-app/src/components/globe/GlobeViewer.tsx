@@ -99,12 +99,12 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
         variable: 'Humidity',
         unit: '%',
         items: [
-          { color: '#F6FFED', label: '0-20%' },
-          { color: '#D9F7BE', label: '20-40%' },
-          { color: '#B7EB8F', label: '40-60%' },
-          { color: '#95DE64', label: '60-80%' },
-          { color: '#73D13D', label: '80-90%' },
-          { color: '#52C41A', label: '90-100%' }
+          { color: '#1414FF', label: '0-20%' },       // Dark blue
+          { color: '#4B4BFF', label: '20-40%' },      // Medium blue
+          { color: '#8282FF', label: '40-60%' },      // Light blue
+          { color: '#B9B9FF', label: '60-80%' },      // Very light blue
+          { color: '#E6E6FF', label: '80-90%' },      // Pale blue
+          { color: '#FFFFFF', label: '90-100%' }      // White
         ]
       },
       'wind-speed': {
