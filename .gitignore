@@ -139,3 +139,4 @@ backend/climate_foresight_venv
 backend/data/
 backend/api/controller/__pycache__
 backend/api/services/__pycache__
+ai_prompt

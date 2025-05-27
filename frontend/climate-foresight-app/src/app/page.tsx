@@ -1,6 +1,6 @@
-// import Home from '@/components/Home'
-import ClimateVisualizationApp from '@/components/VisualizerHome'
+import Home from '@/components/Home'
+// import ClimateVisualizationApp from '@/components/VisualizerHome'
 
 export default function Page() {
-  return <ClimateVisualizationApp />
+  return <Home />
 }

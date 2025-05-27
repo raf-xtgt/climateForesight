@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   NativeSelectField,
   NativeSelectRoot,
@@ -9,11 +9,23 @@ import {
   Box,
   Button,
   VStack,
-  Text
+  Text,
+  Slider,
+  SliderTrack,
+  SliderThumb,
+  Tooltip
 } from '@chakra-ui/react'
 
-export default function ClimateControls() {
+interface ClimateControlsProps {
+  onVisualize: (metric: string, opacity: number, resolution: number) => void
+  onReset: () => void
+}
+
+export default function ClimateControls({ onVisualize, onReset }: ClimateControlsProps) {
   const [selectedMetric, setSelectedMetric] = useState('temperature')
+  const [opacity, setOpacity] = useState(70)
+  const [resolution, setResolution] = useState(5)
+  const [showTooltip, setShowTooltip] = useState(false)
 
   const climateMetrics = [
     { value: 'temperature', label: 'Temperature' },
@@ -22,6 +34,10 @@ export default function ClimateControls() {
     { value: 'humidity', label: 'Humidity' },
     { value: 'wind-speed', label: 'Wind Speed' },
   ]
+
+  const handleVisualize = () => {
+    onVisualize(selectedMetric, opacity, resolution)
+  }
 
   return (
     <VStack gap={6} align="stretch">
@@ -71,6 +87,7 @@ export default function ClimateControls() {
           bg="rgba(255, 255, 255, 0.2)"
           color="white"
           _hover={{ bg: 'rgba(255, 255, 255, 0.3)' }}
+          onClick={handleVisualize}
         >
           Apply Visualization
         </Button>
@@ -80,6 +97,7 @@ export default function ClimateControls() {
           size="sm"
           color="whiteAlpha.800"
           _hover={{ bg: 'rgba(255, 255, 255, 0.1)' }}
+          onClick={onReset}
         >
           Reset View
         </Button>
