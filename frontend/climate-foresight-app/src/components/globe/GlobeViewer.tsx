@@ -24,6 +24,7 @@ import './cesium-overrides.css'
 import countryData from '../../../public/data/country_coordinates.json'
 import windArrow from '../../../public/wind-arrow.png'
 import ClimateLegend from './ClimateLegend'
+import Timeline from './Timeline'
 
 if (typeof window !== 'undefined') {
   window.CESIUM_BASE_URL = '/cesium/'
@@ -46,8 +47,17 @@ interface LegendConfig {
   }[]
 }
 
+interface HourlyData {
+  hour: number
+  formatted_time: string
+  timestamp: string
+  image: string
+}
+
 interface GlobeMethods {
   visualizeClimate: (metric: string, opacity: number, resolution: number) => void;
+  setHourlyData: (data: HourlyData[]) => void;
+  setCurrentHour: (hour: number) => void;
 }
 
 export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
@@ -56,6 +66,9 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
   const [activeLayer, setActiveLayer] = useState<ImageryLayer | null>(null)
   const [climateLayer, setClimateLayer] = useState<ImageryLayer | null>(null)
   const [legendConfig, setLegendConfig] = useState<LegendConfig | null>(null)
+  const [hourlyData, setHourlyData] = useState<HourlyData[]>([])
+  const [currentHour, setCurrentHour] = useState(0)
+  const [currentOpacity, setCurrentOpacity] = useState(70); // Default opacity
 
   const getLegendConfig = (variable: string) => {
     const legends: Record<string, LegendConfig> = {
@@ -128,51 +141,72 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
     useImperativeHandle(ref, () => ({
       visualizeClimate: async (metric: string, opacity: number, resolution: number) => {
         if (!viewerRef.current) return;
-        
+        setCurrentOpacity(opacity); // Store the opacity
+    
         try {
           // Remove previous climate layer if exists
           if (climateLayer) {
             viewerRef.current.imageryLayers.remove(climateLayer);
-            URL.revokeObjectURL((climateLayer.imageryProvider as SingleTileImageryProvider).url);
+            if ((climateLayer.imageryProvider as SingleTileImageryProvider).url) {
+              URL.revokeObjectURL((climateLayer.imageryProvider as SingleTileImageryProvider).url);
+            }
             setClimateLayer(null);
           }
     
           // Special handling for wind (particles)
           if (metric === 'wind-speed') {
             await displayWindParticles(resolution);
+            setHourlyData([]); // Clear hourly data for wind
             return;
           }
     
-          // Fetch heatmap image
-          const response = await fetch(
-            `http://localhost:5000/api/weather/heatmap/${metric}?width=2048&height=1024&resolution=${resolution}`
+          // Always use the hourly endpoint
+          const hourlyResponse = await fetch(
+            `http://localhost:5000/api/weather/heatmap-with-timestamps/${metric}?width=2048&height=1024&resolution=${resolution}`
           );
           
-          if (!response.ok) throw new Error('Failed to fetch climate data');
+          if (!hourlyResponse.ok) throw new Error('Failed to fetch climate data');
           
-          const data = await response.json();
-          const blob = await fetch(data.image).then(res => res.blob());
-          const imageUrl = URL.createObjectURL(blob);
+          const hourlyJson = await hourlyResponse.json();
+          setHourlyData(hourlyJson.hourly_data);
           
-          // Create single tile provider with required dimensions
-          const provider = new SingleTileImageryProvider({
-            url: imageUrl,
-            rectangle: Rectangle.fromDegrees(-180, -90, 180, 90),
-            tileWidth: 2048,  // Must match your image width
-            tileHeight: 1024  // Must match your image height
-          });
-          
-          // Add layer to globe
-          const layer = viewerRef.current.imageryLayers.addImageryProvider(provider);
-          layer.alpha = opacity / 100;
-          setClimateLayer(layer);
-          setLegendConfig(getLegendConfig(metric))
-
+          // Set to current hour or first available hour
+          const currentHour = new Date().getHours();
+          const initialHour = hourlyJson.hourly_data.find((h: any) => h.hour === currentHour) ? 
+                             currentHour : 
+                             hourlyJson.hourly_data[0]?.hour || 0;
+          setCurrentHour(initialHour);
+    
+          // Immediately display the initial hour's data
+          const hourData = hourlyJson.hourly_data.find((h: any) => h.hour === initialHour);
+          if (hourData) {
+            const blob = await fetch(hourData.image).then(res => res.blob());
+            const imageUrl = URL.createObjectURL(blob);
+            
+            const provider = new SingleTileImageryProvider({
+              url: imageUrl,
+              rectangle: Rectangle.fromDegrees(-180, -90, 180, 90),
+              tileWidth: 2048,
+              tileHeight: 1024
+            });
+            
+            const layer = viewerRef.current.imageryLayers.addImageryProvider(provider);
+            layer.alpha = opacity / 100;
+            setClimateLayer(layer);
+            setLegendConfig(getLegendConfig(metric));
+          }
         } catch (error) {
           console.error('Error visualizing climate data:', error);
         }
+      },
+      setHourlyData: (data: HourlyData[]) => {
+        setHourlyData(data);
+      },
+      setCurrentHour: (hour: number) => {
+        setCurrentHour(hour);
       }
     }));
+
   // Function to display wind particles
   const displayWindParticles = async (resolution: number) => {
     if (!viewerRef.current) return
@@ -311,9 +345,56 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
     }
   }, [])
 
+  useEffect(() => {
+    const updateClimateLayer = async () => {
+      if (!viewerRef.current || !hourlyData.length) return;
+
+      const hourData = hourlyData.find(h => h.hour === currentHour);
+      if (!hourData) return;
+
+      try {
+        // Remove previous layer if exists
+        if (climateLayer) {
+          viewerRef.current.imageryLayers.remove(climateLayer);
+          if ((climateLayer.imageryProvider as SingleTileImageryProvider).url) {
+            URL.revokeObjectURL((climateLayer.imageryProvider as SingleTileImageryProvider).url);
+          }
+          setClimateLayer(null);
+        }
+
+        const blob = await fetch(hourData.image).then(res => res.blob());
+        const imageUrl = URL.createObjectURL(blob);
+
+        const provider = new SingleTileImageryProvider({
+          url: imageUrl,
+          rectangle: Rectangle.fromDegrees(-180, -90, 180, 90),
+          tileWidth: 2048,
+          tileHeight: 1024
+        });
+
+        const layer = viewerRef.current.imageryLayers.addImageryProvider(provider);
+        if (layer) {
+          layer.alpha = currentOpacity / 100;
+          setClimateLayer(layer);
+        }
+      } catch (error) {
+        console.error('Error updating climate layer:', error);
+      }
+    };
+
+    updateClimateLayer();
+  }, [currentHour, hourlyData, currentOpacity]);
+
   return (
-    <div ref={cesiumContainer} className="w-full h-full" >
+    <div ref={cesiumContainer} className="w-full h-full relative" >
       {legendConfig && <ClimateLegend {...legendConfig} />}
+      {hourlyData.length > 0 && (
+        <Timeline 
+          onTimeChange={setCurrentHour}
+          currentHour={currentHour}
+          hours={hourlyData}
+        />
+      )}
     </div>
   )
 })

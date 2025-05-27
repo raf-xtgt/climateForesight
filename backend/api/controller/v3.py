@@ -204,33 +204,83 @@ class AdvancedClimateService:
         
         return (255, 255, 255, alpha)
 
-climate_service = AdvancedClimateService()
+    def generate_hourly_global_data(self, resolution=2, date=None, hour=0):
+        """Generate hourly climate data with temporal variations"""
+        if date is None:
+            date = datetime.now().date()
+        
+        weather_grid = []
+        
+        # Calculate day of year for seasonal effects
+        day_of_year = date.timetuple().tm_yday
+        seasonal_angle = 2 * math.pi * day_of_year / 365.25
+        
+        # Calculate solar angle for the hour
+        solar_hour_angle = (hour - 12) * 15  # 15 degrees per hour from solar noon
+        
+        for lat in range(-90, 91, resolution):
+            for lon in range(-180, 181, resolution):
+                # Enhanced realistic climate patterns with temporal variations
+                
+                # Base temperature with seasonal and diurnal variations
+                base_temp = 30 - abs(lat) * 0.6
+                seasonal_factor = math.cos(math.radians(lat * 4)) * math.sin(seasonal_angle)
+                
+                # Diurnal temperature variation (cooler at night, warmer during day)
+                diurnal_factor = 8 * math.cos(math.radians(solar_hour_angle + lon/15))  # Account for longitude
+                local_solar_time = (hour + lon/15) % 24
+                if local_solar_time < 6 or local_solar_time > 18:
+                    diurnal_factor *= 0.7  # Reduce variation at night
+                
+                temp_variation = np.random.normal(0, 2)
+                temperature = base_temp + seasonal_factor * 5 + diurnal_factor + temp_variation
+                
+                # Humidity with time-based variations (higher at night/early morning)
+                coastal_factor = 1 + 0.3 * math.sin(math.radians(lon * 2))
+                time_humidity_factor = 10 * math.cos(math.radians((local_solar_time - 6) * 15))  # Peak at 6 AM
+                humidity = max(20, min(100, 70 + np.random.normal(0, 8) - abs(lat) * 0.2 + coastal_factor * 8 + time_humidity_factor))
+                
+                # Wind speed with diurnal variations (often stronger during day)
+                jet_stream_lat = 40 + 10 * math.sin(math.radians(lon / 2))
+                wind_base = 5 + 15 * math.exp(-((lat - jet_stream_lat) / 10) ** 2)
+                diurnal_wind_factor = 3 * math.sin(math.radians((local_solar_time - 12) * 15))  # Peak in afternoon
+                wind_speed = max(0, wind_base + diurnal_wind_factor + np.random.normal(0, 2))
+                
+                # Precipitation with temporal patterns (often peaks in afternoon/evening)
+                itcz_lat = 5 * math.sin(math.radians(lon / 3))
+                monsoon_factor = math.exp(-((lat - itcz_lat) / 15) ** 2)
+                time_precip_factor = max(0, 2 * math.sin(math.radians((local_solar_time - 15) * 15)))  # Peak at 3 PM
+                precipitation = max(0, monsoon_factor * 6 + time_precip_factor + np.random.exponential(0.8))
+                
+                # Sunlight with realistic solar patterns and cloud effects
+                solar_declination = 23.5 * math.sin(seasonal_angle)
+                solar_elevation = math.sin(math.radians(lat)) * math.sin(math.radians(solar_declination)) + \
+                                math.cos(math.radians(lat)) * math.cos(math.radians(solar_declination)) * \
+                                math.cos(math.radians(solar_hour_angle))
+                
+                if solar_elevation > 0:
+                    max_sunlight = 1000 * solar_elevation
+                    cloud_factor = 1 - (precipitation / 12) * 0.6
+                    atmospheric_factor = 0.7 + 0.3 * solar_elevation  # Atmospheric absorption
+                    sunlight = max(0, max_sunlight * cloud_factor * atmospheric_factor * (0.85 + np.random.uniform(0, 0.15)))
+                else:
+                    sunlight = 0  # No sunlight when sun is below horizon
+                
+                weather_point = {
+                    'lat': lat,
+                    'lon': lon,
+                    'temperature': round(temperature, 1),
+                    'humidity': round(humidity, 1),
+                    'windSpeed': round(wind_speed, 1),
+                    'precipitation': round(precipitation, 2),
+                    'sunlight': round(sunlight, 1),
+                    'timestamp': datetime.combine(date, datetime.min.time().replace(hour=hour)).isoformat()
+                }
+                weather_grid.append(weather_point)
+        
+        return weather_grid
 
-@bp_v3.route('/weather/global-smooth')
-def get_smooth_global_weather():
-    """Get interpolated global weather data for smooth visualization"""
-    try:
-        resolution = int(request.args.get('resolution', 2))
-        interpolate = request.args.get('interpolate', 'true').lower() == 'true'
-        
-        # Generate dense data
-        raw_data = climate_service.generate_dense_global_data(resolution)
-        
-        if interpolate:
-            # Further interpolate for smoother visualization
-            data = climate_service.interpolate_climate_grid(raw_data, target_resolution=1)
-        else:
-            data = raw_data
-        
-        return jsonify({
-            'data': data,
-            'timestamp': datetime.now().isoformat(),
-            'count': len(data),
-            'resolution': resolution,
-            'interpolated': interpolate
-        })
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+climate_service = AdvancedClimateService()
 
 @bp_v3.route('/weather/heatmap/<variable>')
 def get_climate_heatmap(variable):
@@ -266,51 +316,6 @@ def get_climate_heatmap(variable):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-@bp_v3.route('/weather/contours/<variable>')
-def get_climate_contours(variable):
-    """Generate contour lines for climate data"""
-    try:
-        resolution = int(request.args.get('resolution', 5))
-        levels = int(request.args.get('levels', 10))
-        
-        # Generate climate data
-        data = climate_service.generate_dense_global_data(resolution)
-        
-        if not data:
-            return jsonify({'error': 'No data available'}), 500
-        
-        # Extract coordinates and values
-        lats = np.array([point['lat'] for point in data])
-        lons = np.array([point['lon'] for point in data])
-        values = np.array([point[variable] for point in data])
-        
-        # Create regular grid for contouring
-        grid_lons = np.linspace(-180, 180, 180)
-        grid_lats = np.linspace(-90, 90, 90)
-        grid_lon_mesh, grid_lat_mesh = np.meshgrid(grid_lons, grid_lats)
-        
-        # Interpolate to grid
-        grid_values = griddata(
-            (lons, lats), values,
-            (grid_lon_mesh, grid_lat_mesh),
-            method='linear'
-        )
-        
-        # Generate contour levels
-        vmin, vmax = np.nanmin(values), np.nanmax(values)
-        contour_levels = np.linspace(vmin, vmax, levels)
-        
-        return jsonify({
-            'lons': grid_lons.tolist(),
-            'lats': grid_lats.tolist(),
-            'values': grid_values.tolist(),
-            'levels': contour_levels.tolist(),
-            'variable': variable
-        })
-        
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
 @bp_v3.route('/weather/wind-particles')
 def get_wind_particles():
     """Generate wind particle data for animated visualization"""
@@ -340,6 +345,68 @@ def get_wind_particles():
             'windData': wind_data,
             'particleCount': particle_count,
             'timestamp': datetime.now().isoformat()
+        })
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@bp_v3.route('/weather/heatmap-with-timestamps/<variable>')
+def get_climate_heatmap_with_timestamps(variable):
+    """Generate hourly heatmap images for a full day"""
+    try:
+        width = int(request.args.get('width', 1024))
+        height = int(request.args.get('height', 512))
+        resolution = int(request.args.get('resolution', 5))
+        date_str = request.args.get('date', datetime.now().strftime('%Y-%m-%d'))
+        
+        # Parse date
+        try:
+            target_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+        except ValueError:
+            target_date = datetime.now().date()
+        
+        hourly_images = []
+        
+        # Generate heatmap for each hour of the day
+        for hour in range(24):
+            # Generate hourly climate data
+            data = climate_service.generate_hourly_global_data(resolution, target_date, hour)
+            print("hourly data received:", str(hour))
+            # Generate heatmap image
+            img = climate_service.generate_climate_heatmap(data, variable, width, height)
+            
+            if img is None:
+                continue
+            
+            # Convert image to base64
+            img_buffer = io.BytesIO()
+            img.save(img_buffer, format='PNG')
+            img_buffer.seek(0)
+            img_base64 = base64.b64encode(img_buffer.getvalue()).decode()
+            
+            # Format hour for display (12-hour format with AM/PM)
+            hour_12 = hour if hour <= 12 else hour - 12
+            if hour_12 == 0:
+                hour_12 = 12
+            ampm = 'AM' if hour < 12 else 'PM'
+            formatted_time = f"{hour_12}:00 {ampm}"
+            
+            hourly_images.append({
+                'hour': hour,
+                'formatted_time': formatted_time,
+                'timestamp': datetime.combine(target_date, datetime.min.time().replace(hour=hour)).isoformat(),
+                'image': f'data:image/png;base64,{img_base64}'
+            })
+        
+        return jsonify({
+            'date': date_str,
+            'variable': variable,
+            'width': width,
+            'height': height,
+            'resolution': resolution,
+            'hourly_data': hourly_images,
+            'total_hours': len(hourly_images)
         })
         
     except Exception as e:

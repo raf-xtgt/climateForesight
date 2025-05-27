@@ -18,8 +18,8 @@ export default function ClimateLegend({ variable, unit, items }: ClimateLegendPr
   return (
     <Box
       position="absolute"
-      bottom="20px"
-      right="20px"
+      top="20px"
+      left="20px"
       bg="rgba(0, 0, 0, 0.7)"
       p={4}
       borderRadius="md"
