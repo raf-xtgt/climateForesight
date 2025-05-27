@@ -23,6 +23,7 @@ import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './cesium-overrides.css'
 import countryData from '../../../public/data/country_coordinates.json'
 import windArrow from '../../../public/wind-arrow.png'
+import ClimateLegend from './ClimateLegend'
 
 if (typeof window !== 'undefined') {
   window.CESIUM_BASE_URL = '/cesium/'
@@ -36,6 +37,15 @@ interface CountryData {
   longitude: number
 }
 
+interface LegendConfig {
+  variable: string
+  unit: string
+  items: {
+    color: string
+    label: string
+  }[]
+}
+
 interface GlobeMethods {
   visualizeClimate: (metric: string, opacity: number, resolution: number) => void;
 }
@@ -45,6 +55,73 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
   const viewerRef = useRef<Viewer | null>(null)
   const [activeLayer, setActiveLayer] = useState<ImageryLayer | null>(null)
   const [climateLayer, setClimateLayer] = useState<ImageryLayer | null>(null)
+  const [legendConfig, setLegendConfig] = useState<LegendConfig | null>(null)
+
+  const getLegendConfig = (variable: string) => {
+    const legends: Record<string, LegendConfig> = {
+      temperature: {
+        variable: 'Temperature',
+        unit: '°C',
+        items: [
+          { color: '#0000FF', label: '< -10°C' },
+          { color: '#00AAFF', label: '-10°C to 0°C' },
+          { color: '#00FFAA', label: '0°C to 10°C' },
+          { color: '#FFFF00', label: '10°C to 20°C' },
+          { color: '#FF8000', label: '20°C to 30°C' },
+          { color: '#FF0000', label: '> 30°C' }
+        ]
+      },
+      precipitation: {
+        variable: 'Rainfall',
+        unit: 'mm',
+        items: [
+          { color: '#E6F7FF', label: '0-2 mm' },
+          { color: '#BAE7FF', label: '2-5 mm' },
+          { color: '#91D5FF', label: '5-10 mm' },
+          { color: '#69C0FF', label: '10-20 mm' },
+          { color: '#40A9FF', label: '20-50 mm' },
+          { color: '#1890FF', label: '> 50 mm' }
+        ]
+      },
+      sunlight: {
+        variable: 'Sunlight',
+        unit: 'W/m²',
+        items: [
+          { color: '#FFF7E6', label: '0-200' },
+          { color: '#FFE7BA', label: '200-400' },
+          { color: '#FFD591', label: '400-600' },
+          { color: '#FFC069', label: '600-800' },
+          { color: '#FFA940', label: '800-1000' },
+          { color: '#FF8C00', label: '> 1000' }
+        ]
+      },
+      humidity: {
+        variable: 'Humidity',
+        unit: '%',
+        items: [
+          { color: '#F6FFED', label: '0-20%' },
+          { color: '#D9F7BE', label: '20-40%' },
+          { color: '#B7EB8F', label: '40-60%' },
+          { color: '#95DE64', label: '60-80%' },
+          { color: '#73D13D', label: '80-90%' },
+          { color: '#52C41A', label: '90-100%' }
+        ]
+      },
+      'wind-speed': {
+        variable: 'Wind Speed',
+        unit: 'm/s',
+        items: [
+          { color: '#4dac26', label: '0-5 m/s' },
+          { color: '#b8e186', label: '5-10 m/s' },
+          { color: '#f1b6da', label: '10-15 m/s' },
+          { color: '#d01c8b', label: '15-20 m/s' },
+          { color: '#4d9221', label: '> 20 m/s' }
+        ]
+      }
+    }
+  
+    return legends[variable] || null
+  }
 
 
     // Expose methods via ref
@@ -89,7 +166,8 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
           const layer = viewerRef.current.imageryLayers.addImageryProvider(provider);
           layer.alpha = opacity / 100;
           setClimateLayer(layer);
-          
+          setLegendConfig(getLegendConfig(metric))
+
         } catch (error) {
           console.error('Error visualizing climate data:', error);
         }
@@ -233,7 +311,11 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
     }
   }, [])
 
-  return <div ref={cesiumContainer} className="w-full h-full" />
+  return (
+    <div ref={cesiumContainer} className="w-full h-full" >
+      {legendConfig && <ClimateLegend {...legendConfig} />}
+    </div>
+  )
 })
 GlobeViewer.displayName = 'GlobeViewer';
 export default GlobeViewer;
