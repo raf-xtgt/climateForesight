@@ -8,9 +8,7 @@ import {
   Color,
   GeoJsonDataSource,
   Cartesian3,
-  WebMapServiceImageryProvider,
   SingleTileImageryProvider,
-  Credit,
   Rectangle,
   Math as CesiumMath,
   Cartesian2,
@@ -38,9 +36,6 @@ interface CountryData {
   longitude: number
 }
 
-interface GlobeViewerProps {
-  onVisualize?: (metric: string, opacity: number, resolution: number) => void
-}
 interface GlobeMethods {
   visualizeClimate: (metric: string, opacity: number, resolution: number) => void;
 }
