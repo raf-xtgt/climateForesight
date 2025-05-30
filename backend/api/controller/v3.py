@@ -9,8 +9,23 @@ from scipy.interpolate import griddata, RegularGridInterpolator
 from PIL import Image, ImageDraw
 import io
 import base64
+from dotenv import load_dotenv
+import os
+from pymongo.errors import PyMongoError
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+
+load_dotenv()
 
 bp_v3 = Blueprint('bp_v3', __name__)
+MONGO_DB_PASS = os.getenv('MONGO_DB_PASS')
+MONGO_DB_USER = os.getenv('MONGO_DB_USER')
+uri = f"mongodb+srv://{MONGO_DB_USER}:{MONGO_DB_PASS}@clerkly-dev.fofyy.mongodb.net/?retryWrites=true&w=majority&appName=Clerkly-Dev"
+client = MongoClient(uri, server_api=ServerApi('1'))
+# Choose database and collection
+db = client["climate_foresight_db"]
+collection = db["weather_collection"]
 
 class AdvancedClimateService:
     def __init__(self):
@@ -543,9 +558,107 @@ def get_climate_heatmap_with_timestamps_api(variable):
         return jsonify({'error': str(e)}), 500
 
 
+@bp_v3.route('/weather/heatmap-with-timestamps/v2/<variable>')
+def get_climate_heatmap_with_timestamps_api_v2(variable):
+    """Generate hourly heatmap images for a full day"""
+    try:
+        width = int(request.args.get('width', 1024))
+        height = int(request.args.get('height', 512))
+        resolution = int(request.args.get('resolution', 5))
+        date_str = request.args.get('date', datetime.now().strftime('%Y-%m-%d'))
+        
+        # Parse date
+        target_date = '20250525'
+        hourly_timestamps = generate_hourly_timestamps(target_date)
+        hourly_images = []
+        data = findDocumentsByExactDate(target_date, collection)
+        print("retrieve data from mongo")
+        # Generate heatmap for each hour of the day
+        for ts in hourly_timestamps:
+            filtered_docs = list(filter(lambda doc: doc.get('timestamp') == ts, data))
+            print("filtered for timestamps")
+            img = climate_service.generate_climate_heatmap(filtered_docs, variable, width, height)
+            print("generated heatmap")            
+            if img is None:
+                continue
+            
+            # Convert image to base64
+            img_buffer = io.BytesIO()
+            img.save(img_buffer, format='PNG')
+            img_buffer.seek(0)
+            img_base64 = base64.b64encode(img_buffer.getvalue()).decode()
+            
+            # Format hour for display (12-hour format with AM/PM)
+        
+            dt = datetime.fromisoformat(ts)
+            hour = dt.hour  # Adds hour field to the document
+            hour_12 = hour if hour <= 12 else hour - 12
+            if hour_12 == 0:
+                hour_12 = 12
+            ampm = 'AM' if hour < 12 else 'PM'
+            formatted_time = f"{hour_12}:00 {ampm}"
+            
+            hourly_images.append({
+                'hour': hour,
+                'formatted_time': formatted_time,
+                'timestamp': ts,
+                'image': f'data:image/png;base64,{img_base64}'
+            })
+        
+        return jsonify({
+            'date': date_str,
+            'variable': variable,
+            'width': width,
+            'height': height,
+            'resolution': resolution,
+            'hourly_data': hourly_images,
+            'total_hours': len(hourly_images)
+        })
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+def findDocumentsByExactDate(target_date, collection):
+    """
+    Find documents with exact date match, with error handling
+    
+    Args:
+        target_date (str): The date string to match
+        collection: The MongoDB collection to search in
+        
+    Returns:
+        list: Matching documents, or None if error occurs
+    """
+    try:
+        pipeline = [
+            {
+                "$search": {
+                    "index": "weather_collection_date_index",
+                    "text": {
+                        "query": target_date,
+                        "path": "date"
+                    }
+                }
+            }
+        ]
+        return list(collection.aggregate(pipeline))
+    except PyMongoError as e:
+        print(f"An error occurred: {e}")
+        return None
 
 
 
+def generate_hourly_timestamps(target_date):
+    try:
+        parsed_date = datetime.strptime(target_date, "%Y%m%d")
+    except ValueError:
+        raise ValueError("Invalid date format. Expected 'YYYYMMDD' (e.g., '20250529').")
 
-
+    # Step 2: Generate hourly timestamps for the day
+    hourly_timestamps = [
+        (parsed_date + timedelta(hours=hour)).strftime("%Y-%m-%dT%H:%M:%S+00:00")
+        for hour in range(24)
+    ]
+    return hourly_timestamps
 

@@ -170,7 +170,7 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
     
           // Always use the hourly endpoint
           const hourlyResponse = await fetch(
-            `http://localhost:5000/api/weather/heatmap-with-timestamps/${metric}?width=2048&height=1024&resolution=${resolution}`
+            `http://localhost:5000/api/weather/heatmap-with-timestamps/v2/${metric}?width=2048&height=1024&resolution=${resolution}`
           );
           
           if (!hourlyResponse.ok) throw new Error('Failed to fetch climate data');
