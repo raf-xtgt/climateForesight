@@ -22,6 +22,7 @@ import {
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './cesium-overrides.css'
 import countryData from '../../../public/data/country_coordinates.json'
+// import citiesData from '../../../public/data/city_coordinates.json'
 import windArrow from '../../../public/wind-arrow.png'
 import ClimateLegend from './ClimateLegend'
 import Timeline from './Timeline'
@@ -37,6 +38,13 @@ interface CountryData {
   latitude: number
   longitude: number
 }
+
+// interface CityData {
+//   city: string
+//   latitude: number
+//   longitude: number
+// }
+// const typedCitiesData = citiesData as CityData[];
 
 interface LegendConfig {
   variable: string
@@ -251,6 +259,7 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
     if (speed < 20) return '#d01c8b' // Purple
     return '#4d9221' // Dark green
   }
+
   useEffect(() => {
     if (!cesiumContainer.current || viewerRef.current) return
 
@@ -318,6 +327,36 @@ export const GlobeViewer = forwardRef<GlobeMethods>((props, ref) => {
               scaleByDistance: new NearFarScalar(500000, 1.0, 5000000, 0.5)            }
           })
         })
+
+        // typedCitiesData.forEach((city: CityData) => {
+        //   const position = Cartesian3.fromDegrees(
+        //     city.longitude,
+        //     city.latitude
+        //   )
+          
+        //   entities.add({
+        //     position,
+        //     label: {
+        //       text: city.city,
+        //       font: '45pt sans-serif',
+        //       style: LabelStyle.FILL,
+        //       fillColor: Color.WHITE,
+        //       outlineColor: Color.BLACK,
+        //       outlineWidth: 1,
+        //       verticalOrigin: VerticalOrigin.CENTER,
+        //       horizontalOrigin: HorizontalOrigin.CENTER,
+        //       pixelOffset: new Cartesian3(0, 0),
+        //       showBackground: true,
+        //       backgroundColor: Color.BLACK.withAlpha(0.5),
+        //       backgroundPadding: new Cartesian2(7, 5),
+        //       disableDepthTestDistance: Number.POSITIVE_INFINITY,
+        //       // Only show label when camera is within 5M to 500k meters
+        //       distanceDisplayCondition: new DistanceDisplayCondition(5000, 50000),
+        //       // Scale down when zooming out
+        //       scale: 0.7,
+        //       scaleByDistance: new NearFarScalar(5000, 1.0, 50000, 0.5)            }
+        //   })
+        // })
 
 
 

@@ -140,5 +140,6 @@ backend/data/
 backend/api/controller/__pycache__
 backend/api/services/__pycache__
 ai_prompt
-documentation/UI.drawio
+documentation/misc/
 backend/sample_hourly_data.json
+backend/api/mongo/.cache.sqlite

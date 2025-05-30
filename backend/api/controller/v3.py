@@ -2,7 +2,7 @@ from flask import Flask, jsonify, Blueprint, request, send_file
 from flask_cors import CORS
 import requests
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import math
 from scipy.interpolate import griddata, RegularGridInterpolator
@@ -15,6 +15,8 @@ bp_v3 = Blueprint('bp_v3', __name__)
 class AdvancedClimateService:
     def __init__(self):
         self.base_url = "https://api.open-meteo.com/v1"
+        self.NASA_POWER_BASE_URL = "https://power.larc.nasa.gov/api/temporal/climatology/point"
+
         
     def generate_dense_global_data(self, resolution=2):
         """Generate denser climate data for smooth interpolation"""
@@ -63,6 +65,62 @@ class AdvancedClimateService:
         
         return weather_grid
     
+
+
+    def generate_dense_global_data_from_api(self, resolution=2, date=None, hour=0):
+        """Generate denser climate data for smooth interpolation"""
+        weather_grid = []
+
+        # Calculate date range (last 90 days)
+        end_date = datetime.now()
+        start_date = end_date - timedelta(days=90)
+        
+        # Format dates as YYYYMMDD strings
+        start_str = start_date.strftime("%Y%m%d")
+        end_str = end_date.strftime("%Y%m%d")
+        
+        # Generate data with higher resolution
+        for lat in range(-90, 91, resolution):
+            for lon in range(-180, 181, resolution):
+                params = {
+                    "latitude": lat,
+                    "longitude": lon,
+                    "community": "ag", 
+                    "parameters": "T2M,PRECTOTCORR,ALLSKY_SFC_SW_DWN,RH2M,WS2M",
+                    "start": start_str,
+                    "end": end_str,
+                    "format": "JSON",
+                    "time-standard": "lst"  # local standard time
+                }
+
+                try:
+                    response = requests.get(self.NASA_POWER_BASE_URL, params=params, timeout=30)
+                    response.raise_for_status()
+                    data = response.json()
+                    
+                    props = data['properties']['parameter']
+                    # print("props", props)
+                    weather_point = {
+                        'lat': lat,
+                        'lon': lon,
+                        'temperature': props["T2M"]["ANN"],
+                        'humidity': props["RH2M"]["ANN"],
+                        'windSpeed': props["WS2M"]["ANN"],
+                        'precipitation': props["PRECTOTCORR"]["ANN"],
+                        'sunlight': props["ALLSKY_SFC_SW_DWN"]["ANN"]
+                    }
+                    weather_grid.append(weather_point)
+
+                except requests.exceptions.HTTPError as e:
+                    print(f"HTTP Error for lat {lat}, lon {lon}: {str(e)}")
+                    continue
+                except Exception as e:
+                    print(f"Error processing lat {lat}, lon {lon}: {str(e)}")
+                    continue
+        return weather_grid
+    
+
+
     def interpolate_climate_grid(self, data, target_resolution=1):
         """Create interpolated grid for smooth visualization"""
         if not data:
@@ -278,6 +336,7 @@ class AdvancedClimateService:
                 }
                 weather_grid.append(weather_point)
         
+        # print("Size of weather grid:", str(len(weather_grid)))
         return weather_grid
 
 climate_service = AdvancedClimateService()
@@ -372,7 +431,78 @@ def get_climate_heatmap_with_timestamps(variable):
         for hour in range(24):
             # Generate hourly climate data
             data = climate_service.generate_hourly_global_data(resolution, target_date, hour)
-            print("hourly data received:", str(hour))
+            # print("hourly data size", str(len(data)))
+
+            # print("hourly data")
+            # print(data)
+            # Generate heatmap image
+            img = climate_service.generate_climate_heatmap(data, variable, width, height)
+            
+            if img is None:
+                continue
+            
+            # Convert image to base64
+            img_buffer = io.BytesIO()
+            img.save(img_buffer, format='PNG')
+            img_buffer.seek(0)
+            img_base64 = base64.b64encode(img_buffer.getvalue()).decode()
+            
+            # Format hour for display (12-hour format with AM/PM)
+            hour_12 = hour if hour <= 12 else hour - 12
+            if hour_12 == 0:
+                hour_12 = 12
+            ampm = 'AM' if hour < 12 else 'PM'
+            formatted_time = f"{hour_12}:00 {ampm}"
+            
+            hourly_images.append({
+                'hour': hour,
+                'formatted_time': formatted_time,
+                'timestamp': datetime.combine(target_date, datetime.min.time().replace(hour=hour)).isoformat(),
+                'image': f'data:image/png;base64,{img_base64}'
+            })
+        
+        response_data = {
+            'date': date_str,
+            'variable': variable,
+            'width': width,
+            'height': height,
+            'resolution': resolution,
+            'hourly_data': hourly_images,
+            'total_hours': len(hourly_images)
+        }
+
+        print(json.dumps(response_data, indent=4))  # Pretty-prints the JSON to the console
+
+        return jsonify(response_data)
+
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@bp_v3.route('/weather/heatmap-with-timestamps/nasa-api/<variable>')
+def get_climate_heatmap_with_timestamps_api(variable):
+    """Generate hourly heatmap images for a full day"""
+    try:
+        width = int(request.args.get('width', 1024))
+        height = int(request.args.get('height', 512))
+        resolution = int(request.args.get('resolution', 5))
+        date_str = request.args.get('date', datetime.now().strftime('%Y-%m-%d'))
+        
+        # Parse date
+        try:
+            target_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+        except ValueError:
+            target_date = datetime.now().date()
+        
+        hourly_images = []
+        
+        # Generate heatmap for each hour of the day
+        for hour in range(3):
+            # Generate hourly climate data
+            data = climate_service.generate_dense_global_data_from_api(resolution, target_date, hour)
+            # print("hourly data size", str(len(data)))
+            # print(data)
             # Generate heatmap image
             img = climate_service.generate_climate_heatmap(data, variable, width, height)
             
@@ -411,3 +541,11 @@ def get_climate_heatmap_with_timestamps(variable):
         
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+
+
+
+
+
+
+
